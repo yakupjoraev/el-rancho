@@ -1,0 +1,248 @@
+.container-control {
+  position: relative;
+}
+
+.hero {
+  height: 886px;
+  color: var(--white-color);
+  overflow: hidden;
+
+  // .hero__inner
+
+  &__inner {}
+
+  // .hero__slider
+
+  &__slider {
+    height: 886px;
+  }
+
+  // .hero__slider-wrapper
+
+  &__slider-wrapper {}
+
+  // .hero__slide
+
+  &__slide {
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.51));
+    }
+  }
+
+  // .hero__main
+
+  &__main {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 330px;
+    z-index: 2;
+  }
+
+  &__slider-control {
+    position: absolute;
+    bottom: 168px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 150px;
+    width: 150px;
+    height: 30px;
+    z-index: 2;
+  }
+
+  // .hero__info
+
+  &__info {}
+
+  // .hero__title
+
+  &__title {
+    max-width: 760px;
+    margin-bottom: 25px;
+    font-family: var(--second-font);
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  // .hero__descr
+
+  &__descr {
+    max-width: 560px;
+  }
+
+  // .hero__plays
+
+  &__plays {
+    position: relative;
+    flex: 0 0 425px;
+    display: flex;
+    align-items: center;
+    // width: 425px;
+    // height: 336px;
+  }
+
+  // .hero__play
+
+  &__play {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 336px;
+    width: 336px;
+    height: 336px;
+  }
+
+  // .hero__play-wrapper
+
+  &__play-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+    animation: playWrapper 20s linear infinite;
+    border: 1px solid var(--white-color);
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    opacity: 0.3;
+  }
+
+  // .hero__play-inner
+
+  &__play-inner {
+    position: absolute;
+    top: 68px;
+    left: 68px;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: transparent;
+    transform: translate(-60%, -50%);
+    border: 1px solid var(--white-color);
+    border-right-color: transparent;
+    border-top-color: transparent;
+    animation: playInner 15s linear infinite;
+  }
+
+  // .hero__play-main
+
+  &__play-main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 80px;
+    width: 80px;
+    height: 80px;
+    background-color: var(--white-color);
+    border-radius: 100%;
+    transition: background-color 0.2s linear;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      border-radius: 100%;
+      // background-color: var(--white-color);
+      opacity: 0.3;
+      z-index: -1;
+      animation: playPulse 1.1s linear infinite;
+    }
+
+    &:hover {
+      background-color: var(--yellow-color);
+
+      &::after {
+        animation: playPulseYellow 1.1s linear infinite;
+      }
+
+      & .hero__play-tringle path {
+        fill: var(--white-color);
+      }
+    }
+  }
+
+  // .hero__play-tringle
+
+  &__play-tringle {
+    width: 22px;
+    height: 22px;
+
+    & path {
+      transition: all 0.2s linear;
+    }
+  }
+
+  // .hero__plays-descr
+
+  &__plays-descr {
+    max-width: 140px;
+    margin-left: -50px;
+  }
+
+  // .hero__slider-next
+
+  &__slider-next {
+    display: flex;
+    align-items: center;
+    order: 3;
+    cursor: pointer;
+
+    &.swiper-button-disabled {
+      opacity: 0.3;
+    }
+  }
+
+  // .hero__slider-prev
+
+  &__slider-prev {
+    display: flex;
+    align-items: center;
+    order: 1;
+    cursor: pointer;
+
+    &.swiper-button-disabled {
+      opacity: 0.3;
+    }
+  }
+
+  // .hero__slider-pagination
+
+  &__slider-pagination {
+    position: static;
+    order: 2;
+    font-size: 24px;
+    line-height: 30px;
+    color: var(--white-color);
+
+    & span {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}

@@ -1,0 +1,237 @@
+// Footer
+
+.footer {
+  padding: 90px 0 40px 0;
+  background-color: var(--green-color);
+
+  // .footer__inner
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .footer__top
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+
+  // .footer__logo
+
+  &__logo {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+  }
+
+  // .footer__logo-link
+
+  &__logo-link {}
+
+  // .footer__logo-img
+
+  &__logo-img {}
+
+  // .footer__logo-name
+
+  &__logo-name {
+    font-family: var(--first-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--white-color);
+  }
+
+  // .footer__booking
+
+  &__booking {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  // .footer__calls
+
+  &__calls {}
+
+  // .footer__call-num
+
+  &__call-num {
+    margin-bottom: 5px;
+    font-family: var(--first-font);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--white-color);
+  }
+
+  // .footer__call-descr
+
+  &__call-descr {
+    font-family: var(--first-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--white-color);
+  }
+
+  // .footer__booking-link
+
+  &__booking-link {}
+
+  // .footer__bottom
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: 372px 254px 275px;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 90px;
+    padding-top: 40px;
+    border-top: 1px solid rgb(255, 255, 255, 0.3);
+  }
+
+  // .footer__menu
+
+  &__menu {}
+
+  // .footer__menu-title
+
+  &__menu-title {}
+
+  // .footer__menu-list
+
+  &__menu-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  // .footer__menu-item
+
+  &__menu-item {}
+
+  // .footer__menu-link
+
+  &__menu-link {
+    font-family: var(--first-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--white-color);
+  }
+
+  // .footer__addresses
+
+  &__addresses {}
+
+  // .footer__addresses-title
+
+  &__addresses-title {}
+
+  // .footer__addresses-list
+
+  &__addresses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  // .footer__addresses-item
+
+  &__addresses-item {}
+
+  // .footer__addresses-link
+
+  &__addresses-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-family: var(--first-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--white-color);
+
+    svg {
+      min-width: 24px;
+    }
+  }
+
+  // .footer__socials
+
+  &__socials {}
+
+  // .footer__socials-title
+
+  &__socials-title {}
+
+  // .footer__socials-list
+
+  &__socials-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  // .footer__socials-item
+
+  &__socials-item {}
+
+  // .footer__socials-link
+
+  &__socials-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33px;
+    height: 33px;
+    background-color: var(--brown-color);
+    border-radius: 100%;
+  }
+
+  // .footer__socials-img
+
+  &__socials-img {}
+
+  // .footer__copys
+
+  &__copys {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .footer__copy
+
+  &__copy {
+    font-family: var(--first-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--white-color);
+  }
+
+  // .footer__political
+
+  &__political {
+    font-family: var(--first-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--white-color);
+  }
+}
+
+.footer-title {
+  margin-bottom: 25px;
+  font-family: var(--second-font);
+  font-size: 24px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: var(--white-color);
+}

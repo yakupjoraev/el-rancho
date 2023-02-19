@@ -1,0 +1,61 @@
+.animals {
+  padding: 300px 0 100px;
+  background-color: var(--grey-color);
+
+  // .animals__inner
+
+  &__inner {}
+
+  // .animals__main
+
+  &__main {
+    display: flex;
+    gap: 35px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  // .animals__info
+
+  &__info {}
+
+  // .animals__title
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  // .animals__descr
+
+  &__texts {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  // .animals__link
+
+  &__link {}
+
+  // .animals__img
+
+  &__img {}
+
+  // .animals__pictures
+
+  &__pictures {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  // .animals__picture
+
+  &__picture {}
+}

@@ -1,0 +1,68 @@
+.prizes {
+  padding: 100px 0;
+  background-color: var(--white-color);
+
+  // .prizes__inner
+
+  &__inner {}
+
+  // .prizes__title
+
+  &__title {
+    max-width: 860px;
+    margin-bottom: 40px;
+  }
+
+  // .prizes__content
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .prizes__infos
+
+  &__infos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  // .prizes__info
+
+  &__info {
+    position: relative;
+    max-width: 750px;
+    padding-left: 20px;
+
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background-color: var(--yellow-color);
+    }
+  }
+
+  // .prizes__images
+
+  &__images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -24px;
+  }
+
+  // .prizes__item
+
+  &__item {}
+
+  // .prizes__img
+
+  &__img {}
+}

@@ -1,0 +1,35 @@
+.corporate {
+  padding: 100px 0 310px;
+  background-image: url('../img/corporate-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  // .corporate__descr
+
+  &__descr {
+    margin-bottom: 20px;
+    color: var(--white-color);
+  }
+
+  // .corporate__title
+
+  &__title {
+    margin-bottom: 40px;
+    color: var(--white-color);
+
+    &::after {
+      content: none;
+    }
+  }
+
+  // .corporate__link
+
+  &__link {
+    width: fit-content;
+    margin: 0 auto;
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.3);
+    color: var(--white-color);
+  }
+}

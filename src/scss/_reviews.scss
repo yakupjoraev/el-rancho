@@ -1,0 +1,158 @@
+.reviews {
+  padding: 100px 0;
+  background-color: var(--white-color);
+
+  // .reviews__slider
+
+  &__slider {
+    overflow: hidden;
+  }
+
+  // .reviews__slider-header
+
+  &__slider-header {
+    margin-bottom: 60px;
+  }
+
+  // .reviews__slider-descr
+
+  &__slider-descr {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  // .reviews__slider-control
+
+  &__slider-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .reviews__slider-title
+
+  &__slider-title {
+
+    &::after {
+      content: none;
+    }
+  }
+
+  // .reviews__slider-arrows
+
+  &__slider-arrows {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  // .reviews__slider-prev
+
+  &__slider-prev {
+    cursor: pointer;
+
+    &:hover {
+      svg rect {
+        stroke: var(--green-color);
+      }
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.3;
+
+      &:hover {
+        svg rect {
+          stroke: var(--brown-color);
+        }
+      }
+    }
+  }
+
+  // .reviews__slider-next
+
+  &__slider-next {
+    cursor: pointer;
+
+    &:hover {
+      svg rect {
+        stroke: var(--green-color);
+      }
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.3;
+
+      &:hover {
+        svg rect {
+          stroke: var(--brown-color);
+        }
+      }
+    }
+  }
+
+  // .reviews__slider-wrapper
+
+  &__slider-wrapper {
+    display: flex;
+  }
+
+  // .reviews__slide
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    max-width: 560px;
+    padding: 35px;
+    background-color: var(--grey-color);
+  }
+
+  // .reviews__slide-name
+
+  &__slide-name {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    font-family: var(--first-font-bold);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background-color: var(--yellow-color);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-width: 325px;
+      width: 100%;
+      height: 1px;
+      background-color: var(--brown-color);
+    }
+  }
+
+  // .reviews__slide-label
+
+  &__slide-label {
+    margin-bottom: 10px;
+    font-family: var(--first-font-bold);
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  // .reviews__slide-descr
+
+  &__slide-descr {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
