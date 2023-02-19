@@ -637,6 +637,26 @@ body.locked {
   opacity: 1;
 }
 
+.input.js_error::-webkit-input-placeholder {
+  color: #EA0000;
+}
+
+.input.js_error::-moz-placeholder {
+  color: #EA0000;
+}
+
+.input.js_error:-ms-input-placeholder {
+  color: #EA0000;
+}
+
+.input.js_error::-ms-input-placeholder {
+  color: #EA0000;
+}
+
+.input.js_error::placeholder {
+  color: #EA0000;
+}
+
 .main-title {
   position: relative;
   padding-bottom: 30px;

@@ -796,26 +796,28 @@
 </section>
     <div class="form">
   <div class="container">
-    <form class="form__inner" action="#">
+    <form class="form__inner js-form" action="mail.php" method="POST">
       <h4 class="form__title">
         Оставить заявку на проведение мероприятия
       </h4>
-
+      <input type="hidden" name="admin_email[]" value="yakupjoraev@gmail.com">
+      <input type="hidden" name="form_subject" value="Тема письма">
       <ul class="form__list">
         <li class="form__item">
-          <input class="form__input input" type="text" placeholder="Имя">
+          <input class="form__input js-input input" type="text" name="nmae" placeholder="Имя">
         </li>
 
         <li class="form__item">
-          <input class="form__input input" type="number" placeholder="Телефон*">
+          <input class="form__input js-input js-input-phone input" data-validate-field="tel" type="tel" name="tel"
+            placeholder="Телефон*">
         </li>
 
         <li class="form__item">
-          <input class="form__input input" type="number" placeholder="Кол-во гостей">
+          <input class="form__input input js-input" type="number" name="count-peoples" placeholder="Кол-во гостей">
         </li>
 
         <li class="form__item">
-          <textarea class="form__input form__input--textarea " name="Комментарии" placeholder="Комментарии"></textarea>
+          <textarea class="form__input form__input--textarea" name="comments" placeholder="Комментарии"></textarea>
         </li>
       </ul>
       <div class="form__footer">
@@ -1104,7 +1106,8 @@
 </footer>
 
 </body>
-
+<script src="./js/inputmask.min.js"></script>
+<script src="./js/just-validate.min.js"></script>
 <script src="./js/graph-modal.min.js"></script>
 <script src="./js/swiper-bundle.min.js"></script>
 <script src="./js/scripts.min.js"></script>

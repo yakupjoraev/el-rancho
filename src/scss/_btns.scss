@@ -141,6 +141,10 @@
     border-color: #EA0000;
     color: #EA0000;
     opacity: 1;
+
+    &::placeholder {
+      color: #EA0000;
+    }
   }
 }
 

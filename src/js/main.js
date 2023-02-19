@@ -125,4 +125,85 @@ function enabledInput() {
   });
 }
 
-enabledInput()
+enabledInput();
+
+
+function validateForm() {
+  let form = document.querySelector('.js-form'),
+    formInputs = document.querySelectorAll('.js-input'),
+    inputPhone = document.querySelector('.js-input-phone')
+
+
+  function validatePhone(phone) {
+    let re = /^[0-9\s]*$/;
+    return re.test(String(phone));
+  }
+
+  form.onsubmit = function () {
+    let phoneVal = inputPhone.value,
+      emptyInputs = Array.from(formInputs).filter(input => input.value === '');
+
+    formInputs.forEach(function (input) {
+      if (input.value === '') {
+        input.classList.add('js_error');
+
+      } else {
+        input.classList.remove('js_error');
+      }
+    });
+
+    if (emptyInputs.length !== 0) {
+      console.log('inputs not filled');
+      return false;
+    }
+
+    if (!validatePhone(phoneVal)) {
+      console.log('phone not valid');
+      inputPhone.classList.add('js_error');
+      return false;
+    } else {
+      inputPhone.classList.remove('js_error');
+    }
+
+  }
+}
+
+validateForm();
+
+function sendForm() {
+  let selector = document.querySelectorAll('input[type="tel"]');
+  let im = new Inputmask('+7 (999) 999-99-99');
+  im.mask(selector);
+
+
+  let validateForms = function (selector, rules, successModal, yaGoal) {
+    new window.JustValidate(selector, {
+      rules: rules,
+      submitHandler: function (form) {
+        let formData = new FormData(form);
+
+        let xhr = new XMLHttpRequest();
+
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              console.log('Отправлено');
+            }
+          }
+        }
+
+        xhr.open('POST', 'mail.php', true);
+        xhr.send(formData);
+
+        form.reset();
+
+        fileInput.closest('label').querySelector('span').textContent = 'Прикрепить файл';
+      }
+    });
+  }
+
+  validateForms('.js-form', '.thanks-popup', 'send goal');
+
+}
+
+sendForm()
