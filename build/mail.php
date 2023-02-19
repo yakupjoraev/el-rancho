@@ -41,7 +41,7 @@ try {
   $mail->setFrom($_SERVER['HTTP_HOST'], 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('yakupjoraev.gmail.com');
+  $mail->addAddress('yakupjoraev@gmail.com');
 
   // Прикрипление файлов к письму
   if (!empty($file['name'][0])) {
