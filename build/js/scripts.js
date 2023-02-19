@@ -197,8 +197,6 @@ function sendForm() {
         xhr.send(formData);
 
         form.reset();
-
-        fileInput.closest('label').querySelector('span').textContent = 'Прикрепить файл';
       }
     });
   }
