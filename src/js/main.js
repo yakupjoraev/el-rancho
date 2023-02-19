@@ -118,10 +118,10 @@ function validateForm() {
     inputPhone = document.querySelector('.js-input-phone')
 
 
-  function validatePhone(phone) {
-    let re = /^[0-9\s]*$/;
-    return re.test(String(phone));
-  }
+  // function validatePhone(phone) {
+  //   let re = /^[0-9\s]*$/;
+  //   return re.test(String(phone));
+  // }
 
   form.onsubmit = function () {
     let phoneVal = inputPhone.value,
@@ -141,13 +141,13 @@ function validateForm() {
       return false;
     }
 
-    if (!validatePhone(phoneVal)) {
-      console.log('phone not valid');
-      inputPhone.classList.add('js_error');
-      return false;
-    } else {
-      inputPhone.classList.remove('js_error');
-    }
+    // if (!validatePhone(phoneVal)) {
+    //   console.log('phone not valid');
+    //   inputPhone.classList.add('js_error');
+    //   return false;
+    // } else {
+    //   inputPhone.classList.remove('js_error');
+    // }
 
   }
 }
