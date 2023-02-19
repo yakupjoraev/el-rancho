@@ -111,22 +111,6 @@ window.addEventListener('scroll', fixedNav);
 // вызов модал
 const modal = new GraphModal();
 
-function enabledInput() {
-  let inputs = document.querySelectorAll('.input')
-
-  inputs.forEach(input => {
-    value = input.value.length
-
-    if (value > '' || value > 0) {
-      input.classList.add('enabled')
-    } else {
-      input.classList.remove('enabled')
-    }
-  });
-}
-
-enabledInput();
-
 
 function validateForm() {
   let form = document.querySelector('.js-form'),
