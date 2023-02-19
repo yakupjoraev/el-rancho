@@ -184,7 +184,7 @@ function sendForm() {
     });
   }
 
-  validateForms('.js-form', '.thanks-popup', 'send goal');
+  validateForms('.js-form', { tel: { required: true } }, '.thanks-popup', 'send goal');
 
 }
 
