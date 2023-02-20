@@ -172,4 +172,21 @@
     height: 1px;
     background-color: var(--brown-color);
   }
+
+  @media (max-width: $breakpoint1450) {
+    font-size: 40px;
+  }
+
+  @media (max-width: $breakpoint992) {
+    padding-bottom: 20px;
+    font-size: 35px;
+
+    &::after {
+      width: 170px;
+    }
+  }
+
+  @media (max-width: $breakpoint768) {
+    font-size: 26px;
+  }
 }

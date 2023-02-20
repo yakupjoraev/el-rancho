@@ -2,6 +2,14 @@
   padding: 300px 0 100px;
   background-color: var(--grey-color);
 
+  @media (max-width: $breakpoint992) {
+    padding: 333px 0 80px 0;
+  }
+
+  @media (max-width: $breakpoint768) {
+    padding: 353px 0 80px 0;
+  }
+
   // .animals__inner
 
   &__inner {}
@@ -13,6 +21,16 @@
     gap: 35px;
     justify-content: space-between;
     margin-bottom: 40px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      gap: 50px;
+      margin-bottom: 20px;
+    }
   }
 
   // .animals__info
@@ -23,6 +41,10 @@
 
   &__title {
     margin-bottom: 40px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 30px;
+    }
   }
 
   // .animals__descr
@@ -36,6 +58,15 @@
 
     &:not(:last-child) {
       margin-bottom: 20px;
+
+      @media (max-width: $breakpoint992) {
+        margin-bottom: 15px;
+      }
+    }
+
+    @media (max-width: $breakpoint992) {
+      font-size: 16px;
+      line-height: 20px;
     }
   }
 
@@ -45,7 +76,18 @@
 
   // .animals__img
 
-  &__img {}
+  &__img {
+    max-width: 100%;
+
+    @media (max-width: $breakpoint992) {
+      max-width: 250px;
+      object-fit: cover;
+    }
+
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+    }
+  }
 
   // .animals__pictures
 
@@ -53,9 +95,23 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
+
+    @media (max-width: $breakpoint992) {
+      gap: 20px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   // .animals__picture
 
-  &__picture {}
+  &__picture {
+    max-width: 100%;
+
+    @media (max-width: $breakpoint768) {
+      width: 100%;
+    }
+  }
 }

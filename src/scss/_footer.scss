@@ -4,6 +4,15 @@
   padding: 90px 0 40px 0;
   background-color: var(--green-color);
 
+
+  @media (max-width: $breakpoint992) {
+    padding: 70px 0 40px 0;
+  }
+
+  @media (max-width: $breakpoint768) {
+    padding: 50px 0;
+  }
+
   // .footer__inner
 
   &__inner {
@@ -18,6 +27,19 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 70px;
+
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 40px;
+      padding-right: 50px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      gap: 50px;
+      padding-right: 0;
+      align-items: center;
+    }
   }
 
   // .footer__logo
@@ -52,6 +74,16 @@
     display: flex;
     align-items: center;
     gap: 40px;
+
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    @media (max-width: $breakpoint480) {
+      width: 100%;
+    }
   }
 
   // .footer__calls
@@ -67,6 +99,11 @@
     font-size: 20px;
     line-height: 25px;
     color: var(--white-color);
+
+    @media (max-width: $breakpoint768) {
+      display: inline-flex;
+      margin-bottom: 10px;
+    }
   }
 
   // .footer__call-descr
@@ -77,11 +114,25 @@
     font-size: 16px;
     line-height: 20px;
     color: var(--white-color);
+
+    @media (max-width: $breakpoint992) {
+      display: none;
+    }
+
+    @media (max-width: $breakpoint768) {
+      display: block;
+      text-align: center;
+    }
   }
 
   // .footer__booking-link
 
-  &__booking-link {}
+  &__booking-link {
+
+    @media (max-width: $breakpoint480) {
+      width: 100%;
+    }
+  }
 
   // .footer__bottom
 
@@ -93,11 +144,28 @@
     margin-bottom: 90px;
     padding-top: 40px;
     border-top: 1px solid rgb(255, 255, 255, 0.3);
+
+
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: 60px;
+      justify-content: center;
+    }
   }
 
   // .footer__menu
 
-  &__menu {}
+  &__menu {
+
+
+    @media (max-width: $breakpoint992) {
+      display: none;
+    }
+  }
 
   // .footer__menu-title
 
@@ -127,7 +195,19 @@
 
   // .footer__addresses
 
-  &__addresses {}
+  &__addresses {
+
+
+    @media (max-width: $breakpoint992) {
+      max-width: 255px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      margin: 0 auto;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
 
   // .footer__addresses-title
 
@@ -160,11 +240,28 @@
     svg {
       min-width: 24px;
     }
+
+    @media (max-width: $breakpoint768) {
+      text-align: left;
+    }
   }
 
   // .footer__socials
 
-  &__socials {}
+  &__socials {
+
+
+    @media (max-width: $breakpoint992) {
+      justify-self: flex-end;
+      padding-right: 125px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding-right: 0;
+      justify-self: center;
+      text-align: center;
+    }
+  }
 
   // .footer__socials-title
 
@@ -176,6 +273,10 @@
     display: flex;
     align-items: center;
     gap: 10px;
+
+    @media (max-width: $breakpoint768) {
+      justify-content: center;
+    }
   }
 
   // .footer__socials-item
@@ -204,6 +305,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+
+    @media (max-width: $breakpoint992) {
+      padding-right: 60px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      padding-right: 0;
+      gap: 25px;
+      text-align: center;
+    }
   }
 
   // .footer__copy
@@ -234,4 +347,8 @@
   line-height: 110%;
   letter-spacing: 0.02em;
   color: var(--white-color);
+
+  @media (max-width: $breakpoint768) {
+    margin-bottom: 20px;
+  }
 }

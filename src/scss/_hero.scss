@@ -7,6 +7,17 @@
   color: var(--white-color);
   overflow: hidden;
 
+
+  @media (max-width: $breakpoint1450) {}
+
+  @media (max-width: $breakpoint992) {
+    height: 716px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    height: 660px;
+  }
+
   // .hero__inner
 
   &__inner {}
@@ -15,6 +26,15 @@
 
   &__slider {
     height: 886px;
+
+
+    @media (max-width: $breakpoint992) {
+      height: 716px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      height: 660px;
+    }
   }
 
   // .hero__slider-wrapper
@@ -47,6 +67,16 @@
     justify-content: space-between;
     padding-top: 330px;
     z-index: 2;
+
+    @media (max-width: $breakpoint992) {
+      padding-top: 244px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding-top: 176px;
+      flex-direction: column;
+      gap: 40px;
+    }
   }
 
   &__slider-control {
@@ -60,6 +90,16 @@
     width: 150px;
     height: 30px;
     z-index: 2;
+
+    @media (max-width: 768px) {
+      bottom: 80px;
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: $breakpoint480) {
+      bottom: 50px;
+    }
   }
 
   // .hero__info
@@ -77,12 +117,33 @@
     line-height: 110%;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+
+    @media (max-width: $breakpoint1450) {
+      margin-bottom: 20px;
+      font-size: 55px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 15px;
+      font-size: 45px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+      text-align: center;
+      font-size: 30px;
+    }
   }
 
   // .hero__descr
 
   &__descr {
     max-width: 560px;
+
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+      text-align: center;
+    }
   }
 
   // .hero__plays
@@ -94,6 +155,18 @@
     align-items: center;
     // width: 425px;
     // height: 336px;
+
+    @media (max-width: $breakpoint992) {
+      flex: 0 1 425px;
+      justify-content: flex-end;
+      margin-top: 150px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex: 0 1 auto;
+      justify-content: center;
+      margin-top: 0;
+    }
   }
 
   // .hero__play
@@ -106,6 +179,12 @@
     min-width: 336px;
     width: 336px;
     height: 336px;
+
+    @media (max-width: $breakpoint992) {
+      min-width: 165px;
+      width: 165px;
+      height: 165px;
+    }
   }
 
   // .hero__play-wrapper
@@ -142,6 +221,13 @@
     border-right-color: transparent;
     border-top-color: transparent;
     animation: playInner 15s linear infinite;
+
+    @media (max-width: $breakpoint992) {
+      top: 34px;
+      left: 34px;
+      width: 100px;
+      height: 100px;
+    }
   }
 
   // .hero__play-main
@@ -172,6 +258,11 @@
       opacity: 0.3;
       z-index: -1;
       animation: playPulse 1.1s linear infinite;
+
+      @media (max-width: $breakpoint992) {
+        width: 52px;
+        height: 52px;
+      }
     }
 
     &:hover {
@@ -185,6 +276,12 @@
         fill: var(--white-color);
       }
     }
+
+    @media (max-width: $breakpoint992) {
+      min-width: 52px;
+      width: 52px;
+      height: 52px;
+    }
   }
 
   // .hero__play-tringle
@@ -196,6 +293,11 @@
     & path {
       transition: all 0.2s linear;
     }
+
+    @media (max-width: $breakpoint992) {
+      width: 14px;
+      height: 14px;
+    }
   }
 
   // .hero__plays-descr
@@ -203,6 +305,12 @@
   &__plays-descr {
     max-width: 140px;
     margin-left: -50px;
+
+    @media (max-width: $breakpoint992) {
+      margin-left: -30px;
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   // .hero__slider-next
@@ -216,6 +324,10 @@
     &.swiper-button-disabled {
       opacity: 0.3;
     }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   // .hero__slider-prev
@@ -228,6 +340,10 @@
 
     &.swiper-button-disabled {
       opacity: 0.3;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 
@@ -243,6 +359,27 @@
     & span {
       font-size: 16px;
       line-height: 21px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__slider-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+
+    & .swiper-pagination-bullet {
+      flex: 0 1 calc(25% - 10px);
+      height: 1px;
+      background-color: var(--white-color);
+      opacity: 0.3;
+    }
+
+    & .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      opacity: 1;
     }
   }
 }

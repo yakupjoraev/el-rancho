@@ -2,6 +2,10 @@
   padding: 100px 0;
   background-color: var(--white-color);
 
+  @media (max-width: $breakpoint992) {
+    padding: 80px 0;
+  }
+
   // .prizes__inner
 
   &__inner {}
@@ -11,6 +15,10 @@
   &__title {
     max-width: 860px;
     margin-bottom: 40px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 30px;
+    }
   }
 
   // .prizes__content
@@ -18,6 +26,11 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    gap: 45px 20px;
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column;
+    }
   }
 
   // .prizes__infos
@@ -34,6 +47,10 @@
     position: relative;
     max-width: 750px;
     padding-left: 20px;
+
+    @media (max-width: $breakpoint992) {
+      width: 100%;
+    }
 
 
     &::after {
@@ -56,6 +73,16 @@
     justify-content: space-between;
     align-items: center;
     margin-top: -24px;
+
+    @media (max-width: $breakpoint992) {
+      margin-top: 0;
+      flex-direction: row;
+      gap: 30px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+    }
   }
 
   // .prizes__item

@@ -20,17 +20,33 @@ function heroSlider() {
     slidesPerView: 1,
     spaceBetween: 0,
     // mousewheel: true,
-    pagination: {
-      el: '.hero__slider-pagination',
-      type: 'custom',
-      clickable: true,
-      renderCustom: function (swiper, current, total) {
-        function numberAppend(d) {
-          return (d < 10) ? '0' + d.toString() : d.toString();
-        }
-        return numberAppend(current) + '<span>' + '/' + numberAppend(total) + '</span>';
+
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        pagination: {
+          el: '.hero__slider-pagination',
+          type: 'bullets',
+          clickable: true,
+        },
+
+      },
+
+      // when window width is >= 640px
+      769: {
+        pagination: {
+          el: '.hero__slider-pagination',
+          type: 'custom',
+          clickable: true,
+          renderCustom: function (swiper, current, total) {
+            function numberAppend(d) {
+              return (d < 10) ? '0' + d.toString() : d.toString();
+            }
+            return numberAppend(current) + '<span>' + '/' + numberAppend(total) + '</span>';
+          }
+        },
       }
-    },
+    }
 
   });
 }
@@ -44,12 +60,32 @@ function reviewsSlider() {
   }
 
   const swiper = new Swiper('.reviews__slider', {
-    slidesPerView: 2,
-    spaceBetween: 40,
+    slidesPerView: 1,
     navigation: {
       nextEl: '.reviews__slider-next',
       prevEl: '.reviews__slider-prev',
     },
+
+    pagination: {
+      el: '.reviews__slider-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+
+    breakpoints: {
+      // when window width is >= 320px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+
+      },
+
+      // when window width is >= 640px
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      }
+    }
   });
 }
 reviewsSlider()

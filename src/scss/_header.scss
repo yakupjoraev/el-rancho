@@ -4,8 +4,7 @@
 // Navbar
 .nav {
   position: relative;
-
-  z-index: 3;
+  z-index: 5;
 }
 
 .navbar {
@@ -24,6 +23,10 @@
   align-content: inherit;
   justify-content: space-between;
   padding-bottom: 30px;
+
+  @media (max-width: $breakpoint768) {
+    margin-right: 10px;
+  }
 }
 
 .navbar__booked {
@@ -40,12 +43,20 @@
 
 .logo-img {
   width: 100px;
+
+  @media (max-width: $breakpoint480) {
+    width: 70px;
+  }
 }
 
 .logo__name {
   font-size: 16px;
   line-height: 20px;
   color: var(--white-color);
+
+  @media (max-width: $breakpoint480) {
+    display: none;
+  }
 }
 
 .navbar__calls {
@@ -59,12 +70,26 @@
   font-size: 20px;
   line-height: 25px;
   color: var(--white-color);
+
+  @media (max-width: $breakpoint768) {
+    font-size: 0;
+    line-height: 0;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+    background-image: url('../img/header-phone.svg');
+    background-repeat: no-repeat;
+  }
 }
 
 .navbar__call-text {
   font-size: 16px;
   line-height: 20px;
   color: var(--white-color);
+
+  @media (max-width: $breakpoint768) {
+    display: none;
+  }
 }
 
 .menu {
@@ -72,7 +97,11 @@
   display: flex;
   justify-content: center;
   gap: 50px;
-  // padding: 25px 0;
+
+  @media (max-width: $breakpoint1450) {
+    justify-content: space-between;
+    gap: 20px;
+  }
 
   &::after {
     content: '';
@@ -121,6 +150,10 @@
     &:hover::after {
       content: '';
     }
+
+    @media (max-width: $breakpoint992) {
+      height: auto;
+    }
   }
 }
 
@@ -159,25 +192,31 @@
 
   // .burger
   .burger {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    height: 20px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
+    min-width: 50px;
+    margin-top: 10px;
+    background-color: var(--brown-color);
+    border-radius: 100%;
     z-index: 102;
     cursor: pointer;
 
     &.active-burger {
       &:before {
-        background: $burgerActiveColor;
+        background: #F8F8F8;
         transform: rotate(45deg);
         transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-        top: 8px;
+        top: 24px;
       }
 
       &:after {
-        background: $burgerActiveColor;
+        background: #F8F8F8;
         transform: rotate(-45deg);
-        bottom: 10px;
+        bottom: 24px;
         transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
       }
 
@@ -190,27 +229,27 @@
     &:after {
       content: '';
       position: absolute;
-      height: 2px;
-      width: 100%;
-      background: $burgerColor;
+      height: 1px;
+      width: 25px;
+      background: #F8F8F8;
       transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
     }
 
     &:before {
-      top: 0;
+      top: 17px;
     }
 
     &::after {
-      bottom: 0;
+      bottom: 16px;
     }
 
     span {
       position: absolute;
-      top: 9px;
-      right: 0;
-      width: 100%;
-      background: $burgerColor;
-      height: 2px;
+      top: 25px;
+      right: 12px;
+      width: 25px;
+      background: #F8F8F8;
+      height: 1px;
       transform: scale(1);
       transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
     }
@@ -222,7 +261,25 @@
   }
 
   // .menu__link
-  .menu__item-link {
-    color: white;
+  .menu__item-link {}
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar__top {
+    width: 100%;
+    margin-right: 40px;
+  }
+
+  .navbar__link {
+    display: none;
+  }
+}
+
+.burger {
+  @media (max-width: $breakpoint480) {
+    margin-top: 0;
   }
 }

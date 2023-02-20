@@ -2,16 +2,26 @@
   padding: 100px 0;
   background-color: var(--white-color);
 
+  @media (max-width: $breakpoint992) {
+    position: relative;
+    padding: 80px 0 165px 0;
+  }
+
   // .reviews__slider
 
   &__slider {
     overflow: hidden;
+    padding-right: 15px;
   }
 
   // .reviews__slider-header
 
   &__slider-header {
     margin-bottom: 60px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 0;
+    }
   }
 
   // .reviews__slider-descr
@@ -28,11 +38,26 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: $breakpoint992) {
+      position: absolute;
+      bottom: 80px;
+      left: 0;
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
   // .reviews__slider-title
 
   &__slider-title {
+    display: none;
+
+    @media (max-width: $breakpoint992) {
+      display: block;
+      padding-bottom: 0;
+    }
 
     &::after {
       content: none;
@@ -45,6 +70,12 @@
     display: flex;
     align-items: center;
     gap: 30px;
+
+    @media (max-width: $breakpoint992) {
+      width: 100%;
+      justify-content: space-between;
+      gap: 15px;
+    }
   }
 
   // .reviews__slider-prev
@@ -154,5 +185,46 @@
   &__slide-descr {
     font-size: 16px;
     line-height: 20px;
+  }
+}
+
+.reviews__slider-pagination {
+  display: none;
+}
+
+.reviews__slider-control-title {
+  display: block;
+  padding-bottom: 0;
+}
+
+@media (max-width: $breakpoint992) {
+  .reviews__slider-pagination {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+
+    & .swiper-pagination-bullet {
+      flex: 0 1 calc(25% - 10px);
+      height: 1px;
+      background-color: var(--green-color);
+      opacity: 0.3;
+    }
+
+    & .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+
+  .reviews__slider-control-title {
+    display: none;
+  }
+}
+
+@media (max-width: $breakpoint480) {
+  .reviews__slider-pagination {
+    gap: 5px;
   }
 }
