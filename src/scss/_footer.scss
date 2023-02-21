@@ -116,6 +116,10 @@
     color: var(--white-color);
     cursor: pointer;
 
+    &:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: $breakpoint992) {
       display: none;
     }

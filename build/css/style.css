@@ -757,6 +757,7 @@ body.locked {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 3;
 }
 
 .navbar__call-num {
@@ -771,6 +772,10 @@ body.locked {
   line-height: 20px;
   color: var(--white-color);
   cursor: pointer;
+}
+
+.navbar__call-text:hover {
+  text-decoration: underline;
 }
 
 .menu {
@@ -2392,6 +2397,10 @@ body.locked {
   line-height: 20px;
   color: var(--white-color);
   cursor: pointer;
+}
+
+.footer__call-descr:hover {
+  text-decoration: underline;
 }
 
 .footer__bottom {
