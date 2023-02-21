@@ -1,0 +1,41 @@
+.privacy-policy {
+  padding: 40px 0;
+}
+
+.privacy-policy__title {
+  font-family: var(--second-font);
+  margin-bottom: 30px;
+  font-size: 35px;
+  line-height: 110%;
+
+  @media (max-width: $breakpoint768) {
+    font-size: 25px;
+  }
+
+}
+
+.privacy-policy__text--bold {
+  margin: 20px 0;
+  font-family: var(--first-font-bold);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.privacy-policy__text {
+  margin-bottom: 10px;
+}
+
+
+.privacy-policy__text--subbold {
+  margin-bottom: 10px;
+  font-family: var(--first-font-bold);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.privacy-policy__text--dotted {}
+
+.privacy-policy__text a {
+  color: var(--green-color);
+  text-decoration: underline;
+}

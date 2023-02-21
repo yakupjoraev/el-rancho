@@ -249,6 +249,10 @@
     @media (max-width: $breakpoint768) {
       text-align: left;
     }
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   // .footer__socials
