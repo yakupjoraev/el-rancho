@@ -3,13 +3,37 @@
 <div class="graph-modal">
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="youtube">
     <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
-    <div class="graph-modal__content">
+    <div class="graph-modal__content graph-modal__content--youtube">
       <!-- контент модального окна -->
 
       <iframe class="youtube-iframe" width="560" height="315" src="https://www.youtube.com/embed/fHy9ImHVras"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="graph-modal__container graph-modal__container--callback" role="dialog" aria-modal="true"
+    data-graph-target="callback">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content graph-modal__content--callback">
+      <!-- контент модального окна -->
+
+      <form class="callback" action="#">
+        <h3 class="callback__title">
+          Обратный звонок
+        </h3>
+
+        <input class="callback__input input" type="text" placeholder="Имя">
+        <input class="callback__input input" type="tel" placeholder="Телефон*">
+
+        <button type="submit" class="callback__btn btn-primary">Перезвоните мне</button>
+
+        <p class="callback__political">
+          Нажимая на кнопку перезвоните мне, вы соглашаетесь с
+          <a class="callback__political-link" href="#">политикой конфиденциальности</a>
+        </p>
+      </form>
     </div>
   </div>
 </div>

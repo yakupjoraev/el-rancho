@@ -54,6 +54,7 @@
   // .news__item
 
   &__item {
+    display: grid;
 
     @media (max-width: $breakpoint768) {
       justify-self: center;

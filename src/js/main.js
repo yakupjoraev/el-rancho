@@ -1,5 +1,21 @@
 // Custom scripts
 
+//плавный скролл
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+
+    const blockID = anchor.getAttribute('href').substr(1)
+
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+};
+
 function heroSlider() {
   const container = document.querySelector('.hero')
 
@@ -132,17 +148,19 @@ burgerMenu()
 
 // Вызываем эту функцию, если нам нужно зафиксировать меню при скролле.
 function fixedNav() {
-  const nav = document.querySelector('nav')
+  const nav = document.querySelector('.nav')
 
   // тут указываем в пикселях, сколько нужно проскроллить что бы наше меню стало фиксированным
-  const breakpoint = 1
-  if (window.scrollY >= breakpoint) {
+  const breakpoint = 189
+  if (window.scrollY > breakpoint) {
     nav.classList.add('fixed__nav')
   } else {
     nav.classList.remove('fixed__nav')
   }
 }
 window.addEventListener('scroll', fixedNav);
+
+fixedNav()
 
 // вызов модал
 const modal = new GraphModal();
@@ -152,6 +170,10 @@ function validateForm() {
   let form = document.querySelector('.js-form'),
     formInputs = document.querySelectorAll('.js-input'),
     inputPhone = document.querySelector('.js-input-phone')
+
+  if (!form) {
+    return null
+  }
 
 
   // function validatePhone(phone) {
@@ -191,6 +213,12 @@ function validateForm() {
 validateForm();
 
 function sendForm() {
+
+  let container = document.querySelector('.js-form')
+
+  if (!container) {
+    return null
+  }
   let selector = document.querySelectorAll('input[type="tel"]');
   let im = new Inputmask('+7 (999) 999-99-99');
   im.mask(selector);
@@ -224,4 +252,4 @@ function sendForm() {
 
 }
 
-sendForm()
+sendForm();

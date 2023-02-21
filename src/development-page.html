@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>Туристический комплекс El Rancho</title>
+  <link rel="stylesheet" href="./css/graph-modal.min.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="main__body">
+  <!-- Header -->
+  @@include('./html/_header-development-page.html')
+
+  <!-- Main Page -->
+  <main>
+    @@include('./html/_development-page.html')
+    @@include('./html/_modal.html')
+  </main>
+
+  <!-- Footer -->
+  @@include('./html/_footer.html')
+
+  <style>
+    #block-search {
+      background: #0B382B;
+    }
+
+    .block-search {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 168px;
+      margin-top: -89px;
+      z-index: 4;
+    }
+
+    .tl-container {
+      padding: 0 29px;
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+
+      .block-search {
+        margin-top: 0;
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+
+    }
+  </style>
+  <!-- start TL Search form script -->
+  <script type="text/javascript">
+    (function (w) {
+      var q = [
+        ['setContext', 'TL-INT-uncle-il', 'ru'],
+        ['embed', 'search-form', { container: 'tl-search-form' }]
+      ];
+      var t = w.travelline = (w.travelline || {}), ti = t.integration = (t.integration || {}); ti.__cq = ti.__cq ? ti.__cq.concat(q) : q;
+      if (!ti.__loader) { ti.__loader = true; var d = w.document, p = d.location.protocol, s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = (p == 'https:' ? p : 'http:') + '//ibe.tlintegration.com/integration/loader.js'; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); }
+    })(window);
+  </script>
+  <!-- end TL Search form script -->
+
+</body>
+<script src="./js/inputmask.min.js"></script>
+<script src="./js/just-validate.min.js"></script>
+<script src="./js/graph-modal.min.js"></script>
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/scripts.min.js"></script>
+
+</html>

@@ -1,6 +1,10 @@
 // ************************ Модальное окно ************************ //
 .graph-modal__container {
   padding: 0;
+
+  @media (max-width: 1024px) {
+    margin-left: -10px;
+  }
 }
 
 .graph-modal__close {
@@ -10,11 +14,89 @@
   outline: 0;
 }
 
-.graph-modal__content {
+.graph-modal__content--youtube {
   height: 600px;
+
+  @media (max-width: $breakpoint992) {
+    height: 400px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    height: 300px;
+  }
 }
 
 .youtube-iframe {
   width: 100%;
   height: 100%;
+}
+
+.graph-modal__container--callback {
+  width: 440px;
+
+  @media (max-width: $breakpoint480) {
+    width: 90%;
+  }
+}
+
+.graph-modal__content--callback {
+  width: 440px;
+
+  @media (max-width: $breakpoint480) {
+    width: 100%;
+  }
+}
+
+.callback {
+  padding: 40px;
+  background-color: var(--white-color);
+
+  @media (max-width: $breakpoint480) {
+    padding: 40px 20px;
+  }
+}
+
+.callback__title {
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 124.5%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.callback__input {
+  margin-bottom: 20px;
+  border-color: var(--green-color);
+  color: var(--green-color);
+
+  &::placeholder {
+    color: var(--green-color);
+  }
+}
+
+.callback__input:last-child {
+  margin-bottom: 30px;
+}
+
+.callback__btn {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+.callback__political {
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--green-color);
+}
+
+.callback__political-link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--brown-color);
 }
