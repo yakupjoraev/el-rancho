@@ -114,6 +114,7 @@
     font-size: 16px;
     line-height: 20px;
     color: var(--white-color);
+    cursor: pointer;
 
     @media (max-width: $breakpoint992) {
       display: none;
