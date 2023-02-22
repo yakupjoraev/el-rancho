@@ -3332,7 +3332,7 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding: 115px 20px 20px;
+    padding: 115px 20px 50px;
     z-index: 22;
     overflow-y: auto;
     -webkit-animation: fade 0.1s linear;
