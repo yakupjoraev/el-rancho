@@ -621,8 +621,19 @@
 
 .header.header--development-page {
   overflow: hidden;
+  height: 210px;
+
+  @media (max-width: $breakpoint992) {
+    height: 138px;
+  }
+
+  @media (max-width: $breakpoint480) {
+    height: 115px;
+  }
 
   .nav.fixed__nav {
+    min-height: 72px;
+
     .navbar::after {
       height: 72px;
       background-color: var(--grey-color);
@@ -635,6 +646,7 @@
 
   .navbar {
     position: relative;
+
 
     &::after {
       content: '';

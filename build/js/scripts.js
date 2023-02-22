@@ -152,7 +152,7 @@ function fixedNav() {
   const nav = document.querySelector('.nav')
 
   // тут указываем в пикселях, сколько нужно проскроллить что бы наше меню стало фиксированным
-  const breakpoint = 189
+  const breakpoint = 200
   if (window.scrollY > breakpoint) {
     nav.classList.add('fixed__nav')
   } else {

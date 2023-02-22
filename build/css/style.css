@@ -145,6 +145,11 @@ body.locked {
   }
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "Mulish Regular";
   src: url("../fonts/Mulish-Regular.ttf");
@@ -1073,6 +1078,11 @@ body.locked {
 
 .header.header--development-page {
   overflow: hidden;
+  height: 210px;
+}
+
+.header.header--development-page .nav.fixed__nav {
+  min-height: 72px;
 }
 
 .header.header--development-page .nav.fixed__nav .navbar::after {
@@ -2806,6 +2816,10 @@ body.locked {
     background-image: url("../img/header-booking-green.svg");
   }
 
+  .header.header--development-page {
+    height: 138px;
+  }
+
   .header.header--development-page .navbar::before {
     content: none;
   }
@@ -3860,6 +3874,10 @@ body.locked {
   .nav__footer-link {
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .header.header--development-page {
+    height: 115px;
   }
 
   .hero__slider-control {
