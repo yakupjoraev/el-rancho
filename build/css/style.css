@@ -865,7 +865,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  margin-bottom: 25px;
+  margin: 25px 0;
 }
 
 .nav__footer-link {
@@ -3332,7 +3332,7 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding: 115px 20px 0;
+    padding: 115px 20px 20px;
     z-index: 22;
     overflow-y: auto;
     -webkit-animation: fade 0.1s linear;
