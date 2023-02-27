@@ -104,7 +104,70 @@ function reviewsSlider() {
     }
   });
 }
-reviewsSlider()
+reviewsSlider();
+
+function residenceSlider() {
+  const container = document.querySelector('.residence-detal')
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper('.residence-detal__slider', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.residence-detal__slider-next',
+      prevEl: '.residence-detal__slider-prev',
+    },
+
+  });
+}
+residenceSlider();
+
+function servicesSlider() {
+  const container = document.querySelector('.entertainment-services')
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper('.entertainment-services__slider', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.entertainment-services__slider-next',
+      prevEl: '.entertainment-services__slider-prev',
+    },
+    pagination: {
+      el: '.entertainment-services__pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  });
+}
+servicesSlider();
+
+function servicesItemSlider() {
+  const container = document.querySelector('.entertainment-services__item')
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper('.entertainment-services__item-slider', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.entertainment-services__item-next',
+      prevEl: '.entertainment-services__item-prev',
+    },
+    pagination: {
+      el: '.entertainment-services__item-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  });
+}
+servicesItemSlider();
+
 
 
 // Мобильное меню бургер
@@ -214,7 +277,7 @@ validateForm();
 
 function sendForm() {
 
-  let container = document.querySelector('.js-form')
+  let container = document.querySelector('.js-form');
 
   if (!container) {
     return null

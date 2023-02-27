@@ -56,3 +56,57 @@ html,
 body {
   scroll-behavior: smooth;
 }
+
+.breadcrumbs {
+  padding: 40px 0;
+
+  @media (max-width: $breakpoint768) {
+    padding: 30px 0;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+}
+
+.breadcrumbs__list {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs__item {
+  position: relative;
+  font-size: 12px;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.breadcrumbs__item:not(:last-child) {
+  margin-right: 30px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -22px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translateY(-50%);
+    background-image: url('../img/breadcrumbs-arrow.svg');
+    background-repeat: no-repeat;
+  }
+}
+
+.breadcrumbs__link {
+  white-space: nowrap;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--green-color);
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+}

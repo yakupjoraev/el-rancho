@@ -1,0 +1,89 @@
+.residence {
+
+  // .residence__inner
+
+  &__inner {}
+
+  // .residence__title
+
+  &__title {
+    padding-bottom: 0;
+    margin-bottom: 50px;
+
+    &::after {
+      display: none;
+    }
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // .residence__descr
+
+  &__descr {
+    position: relative;
+    padding: 30px 25px;
+    margin-bottom: 80px;
+    background-color: var(--grey-color);
+
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 40px;
+    }
+
+  }
+
+  // .residence__descr-text
+
+  &__descr-text {
+    padding-left: 50px;
+    font-size: 16px;
+    line-height: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: 25px;
+      width: 24px;
+      height: 24px;
+      background-image: url('../img/check.svg');
+      background-repeat: no-repeat;
+    }
+
+
+    @media (max-width: $breakpoint768) {
+      padding-left: 0;
+      padding-top: 50px;
+
+      &::before {}
+    }
+
+  }
+
+  // .residence__cards
+
+  &__cards {
+    margin-bottom: 100px;
+  }
+
+  // .residence__card
+
+  &__card {
+
+    @media (max-width: $breakpoint992) {
+      & * {
+        opacity: 1;
+      }
+
+      &::after {
+        background: linear-gradient(180deg, #0B382B 0%, rgba(11, 56, 43, 0.6) 100%);
+      }
+
+      &:hover::after {
+        animation: none;
+      }
+    }
+  }
+}

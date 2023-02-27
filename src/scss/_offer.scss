@@ -67,9 +67,9 @@
 
   }
 
-  // .offer_card
+  // .offer__card
 
-  &_card {
+  &__card {
     position: relative;
     min-height: 440px;
     background-repeat: no-repeat;
@@ -94,6 +94,21 @@
       &::after {
         animation: linearGradient .3s ease both;
         // background: linear-gradient(180deg, #0B382B 0%, rgba(11, 56, 43, 0.6) 100%);
+      }
+    }
+
+
+    @media (max-width: $breakpoint992) {
+      & * {
+        opacity: 1;
+      }
+
+      &::after {
+        background: linear-gradient(180deg, #0B382B 0%, rgba(11, 56, 43, 0.6) 100%);
+      }
+
+      &:hover::after {
+        animation: none;
       }
     }
 
