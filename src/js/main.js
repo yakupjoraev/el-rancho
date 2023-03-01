@@ -316,3 +316,38 @@ function sendForm() {
 }
 
 sendForm();
+
+function filtersPictures() {
+  const container = document.querySelector('.gallery__filters')
+
+  if (!container) {
+    return null
+  }
+
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    const filtersMobile = document.querySelector('[data-js-filter]');
+    let filterBtns = document.querySelectorAll('[data-filter]')
+
+    filtersMobile.addEventListener('click', () => {
+      filtersMobile.classList.toggle('active')
+
+    })
+
+    filterBtns.forEach(filterBtn => {
+      filterBtn.addEventListener('click', () => {
+        filtersMobile.classList.remove('active')
+      })
+    });
+  }
+
+
+}
+
+filtersPictures();
+
+var mixer = mixitup('.gallery__pictures', {
+  controls: {
+    enable: true,
+    live: true
+  }
+});
