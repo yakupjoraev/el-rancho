@@ -168,6 +168,23 @@ function servicesItemSlider() {
 }
 servicesItemSlider();
 
+function newsDetalSlider() {
+  const container = document.querySelector('.news-detal')
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper('.news-detal__slider', {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.news-detal__slider-next',
+      prevEl: '.news-detal__slider-prev',
+    },
+  });
+}
+newsDetalSlider();
 
 
 // Мобильное меню бургер
