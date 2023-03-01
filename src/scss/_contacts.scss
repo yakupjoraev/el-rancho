@@ -1,0 +1,271 @@
+.contacts {
+  padding-bottom: 100px;
+
+  @media (max-width: $breakpoint992) {
+    padding-bottom: 80px;
+  }
+
+  // .contacts__inner
+
+  &__inner {}
+
+  // .contacts__title
+
+  &__title {
+    padding-bottom: 0;
+    margin-bottom: 50px;
+
+    &::after {
+      content: none;
+    }
+
+    @media (max-width: $breakpoint992) {
+      padding-bottom: 0;
+    }
+
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // .contacts__info
+
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 30px;
+
+    @media (max-width: $breakpoint992) {
+      gap: 30px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+    }
+  }
+
+  // .contacts__info-block
+
+  &__info-block {
+
+    &:last-child {
+      margin-left: 150px;
+
+      @media (max-width: $breakpoint992) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  // .contacts__info-title
+
+  &__info-title {
+    margin-bottom: 25px;
+    font-family: var(--second-font);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+  }
+
+  // .contacts__info-address
+
+  &__info-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    max-width: 350px;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--green-color);
+
+    svg {
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      max-width: 300px;
+    }
+  }
+
+  // .contacts__info-tel
+
+  &__info-tel {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--green-color);
+
+    svg {
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
+    }
+  }
+
+  // .contacts__info-list
+
+  &__info-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  // .contacts__info-item
+
+  &__info-item {}
+
+  // .contacts__info-link
+
+  &__info-link {}
+
+  // .contacts__info-img
+
+  &__info-img {}
+
+  // .contacts__info-download
+
+  &__info-download {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--green-color);
+
+    svg {
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
+    }
+  }
+
+  // .contacts__map
+
+  &__map {
+    margin-bottom: 40px;
+    overflow: hidden;
+  }
+
+  // .contacts__map-img
+
+  &__map-img {
+
+    @media (max-width: $breakpoint992) {
+      object-position: -200px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      object-position: -300px;
+    }
+
+    @media (max-width: $breakpoint480) {
+      object-position: -380px;
+    }
+  }
+
+  // .contacts__personals
+
+  &__personals {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    justify-content: space-between;
+
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint480) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 50px;
+    }
+  }
+
+  // .contacts__personal
+
+  &__personal {
+    text-align: center;
+  }
+
+  // .contacts__personal-img
+
+  &__personal-img {
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    margin-bottom: 20px;
+    border-radius: 100%;
+  }
+
+  // .contacts__personal-name
+
+  &__personal-name {
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: var(--first-font-bold);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--brown-color);
+  }
+
+  // .contacts__personal-label
+
+  &__personal-label {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+  }
+
+  // .contacts__personal-tel
+
+  &__personal-tel {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--green-color);
+  }
+
+  // .contacts__personal-socials
+
+  &__personal-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  // .contacts__personal-social
+
+  &__personal-social {}
+
+  // .contacts__personal-social-link
+
+  &__personal-social-link {}
+
+  // .contacts__personal-social-img
+
+  &__personal-social-img {}
+
+  // .contacts__personal-email
+
+  &__personal-email {
+    display: flex;
+    justify-content: center;
+    color: var(--brown-color);
+  }
+}

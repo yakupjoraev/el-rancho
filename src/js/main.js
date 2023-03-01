@@ -345,8 +345,9 @@ function filtersPictures() {
 
   if (window.matchMedia("(max-width: 767px)").matches) {
     filterBtns.forEach(filterBtn => {
-      filterBtn.addEventListener('click', () => {
-        filtersMobile.classList.remove('active')
+      filterBtn.addEventListener('click', (event) => {
+        target = event.target
+        target.classList.remove('active')
       })
     });
 
