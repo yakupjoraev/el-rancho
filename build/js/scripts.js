@@ -187,6 +187,70 @@ function newsDetalSlider() {
 }
 newsDetalSlider();
 
+function fermaSlider() {
+  const container = document.querySelector('.ferma')
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper('.ferma__children-slider', {
+    slidesPerView: "auto",
+    spaceBetween: 40,
+    pagination: {
+      el: '.ferma__children-slider-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  });
+}
+fermaSlider();
+
+function fermaPrideSlider() {
+  const container = document.querySelector('.ferma')
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper('.ferma__pride-slider', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.ferma__pride-slider-next',
+      prevEl: '.ferma__pride-slider-prev',
+    },
+    pagination: {
+      el: '.ferma__pride-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  });
+}
+fermaPrideSlider();
+
+function fermaMainSlider() {
+  const container = document.querySelector('.ferma')
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper('.ferma__main-slider', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.ferma__main-slider-next',
+      prevEl: '.ferma__main-slider-prev',
+    },
+    pagination: {
+      el: '.ferma__main-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  });
+}
+fermaMainSlider();
+
+
 
 // Мобильное меню бургер
 function burgerMenu() {
