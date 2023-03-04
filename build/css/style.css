@@ -3388,21 +3388,33 @@ body {
 }
 
 .gallery__pictures {
-  -webkit-column-count: 4;
-     -moz-column-count: 4;
-          column-count: 4;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: row dense;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-column-gap: 20px;
      -moz-column-gap: 20px;
           column-gap: 20px;
+  -webkit-column-count: 4;
+     -moz-column-count: 4;
+          column-count: 4;
   row-gap: 20px;
   margin-bottom: 80px;
 }
 
 .gallery__picture {
+  display: grid;
   max-width: 100%;
   width: 100%;
   height: auto;
   margin-bottom: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .gallery__more {
@@ -3410,6 +3422,13 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
+}
+
+.gallery__pictures .hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
 }
 
 .news-detal {
@@ -3894,6 +3913,8 @@ body {
 }
 
 .contacts__map {
+  width: 100%;
+  height: 400px;
   margin-bottom: 40px;
   overflow: hidden;
 }
@@ -5500,9 +5521,7 @@ body {
   }
 
   .gallery__pictures {
-    -webkit-column-count: 3;
-       -moz-column-count: 3;
-            column-count: 3;
+    grid-template-columns: repeat(3, 1fr);
     margin-bottom: 60px;
   }
 
@@ -5573,11 +5592,6 @@ body {
 
   .contacts__info-address {
     max-width: 300px;
-  }
-
-  .contacts__map-img {
-    -o-object-position: -200px;
-       object-position: -200px;
   }
 
   .contacts__personals {
@@ -6369,9 +6383,7 @@ body {
   }
 
   .gallery__pictures {
-    -webkit-column-count: 2;
-       -moz-column-count: 2;
-            column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .news-detal__top {
@@ -6450,11 +6462,6 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-
-  .contacts__map-img {
-    -o-object-position: -300px;
-       object-position: -300px;
   }
 
   .ferma__title {
@@ -6610,11 +6617,6 @@ body {
 
   .development-page__img {
     max-height: 260px;
-  }
-
-  .contacts__map-img {
-    -o-object-position: -380px;
-       object-position: -380px;
   }
 
   .contacts__personals {

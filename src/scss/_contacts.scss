@@ -151,26 +151,15 @@
   // .contacts__map
 
   &__map {
+    width: 100%;
+    height: 400px;
     margin-bottom: 40px;
     overflow: hidden;
   }
 
   // .contacts__map-img
 
-  &__map-img {
-
-    @media (max-width: $breakpoint992) {
-      object-position: -200px;
-    }
-
-    @media (max-width: $breakpoint768) {
-      object-position: -300px;
-    }
-
-    @media (max-width: $breakpoint480) {
-      object-position: -380px;
-    }
-  }
+  &__map-img {}
 
   // .contacts__personals
 

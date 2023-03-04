@@ -425,11 +425,84 @@ function filtersPictures() {
 
 filtersPictures();
 
-
-
-var mixer = mixitup('.gallery__pictures', {
-  controls: {
-    enable: true,
-    live: true
+function map() {
+  const container = document.querySelector('.contacts')
+  if (!container) {
+    return null
   }
-});
+
+  let center = [56.868918274719825, 38.244967662040686];
+
+  function init() {
+
+
+    let map = new ymaps.Map('contacts-map', {
+      center: center,
+      zoom: 17
+    });
+
+    let placemark = new ymaps.Placemark(center, {}, {
+      iconLayout: 'default#image',
+      iconImageHref: '../img/location-icon.svg',
+      iconImageSize: [42, 42],
+      iconImageOffset: [-21, -41]
+    })
+
+    map.geoObjects.add(placemark);
+
+    // map.controls.remove('geolocationControl'); // удаляем геолокацию
+    // map.controls.remove('searchControl'); // удаляем поиск
+    // map.controls.remove('trafficControl'); // удаляем контроль трафика
+    // map.controls.remove('typeSelector'); // удаляем тип
+    // map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+    // map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+    // map.controls.remove('rulerControl'); // удаляем контрол правил
+    // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+  }
+
+  ymaps.ready(init);
+}
+
+map();
+
+function galleryMore() {
+  const more = document.querySelector('.js-gallery-more');
+  const galleryContainer = document.querySelector('.gallery__pictures');
+  let galleryHidden = galleryContainer.querySelectorAll('.hidden')
+
+  more.addEventListener('click', () => {
+    galleryHidden.forEach(hidden => {
+      hidden.classList.remove('hidden')
+    });
+
+    more.style.display = "none";
+  })
+}
+galleryMore();
+
+function galleryMixitup() {
+  const container = document.querySelector('.gallery')
+  if (!container) {
+    return null
+  }
+  var mixer = mixitup('.gallery__pictures', {
+    controls: {
+      enable: true,
+      live: true,
+    },
+
+    animation: {
+      enable: false
+      // duration: 600,
+      // easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
+      // nudge: false,
+      // reverseOut: false,
+      // effects: "fade translateZ(0px)",
+      // applyPerspective: false,
+      // queue: false,
+      // animateResizeContainer: false,
+    }
+
+  });
+}
+galleryMixitup()
