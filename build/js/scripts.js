@@ -470,6 +470,7 @@ function galleryMore() {
   const more = document.querySelector('.js-gallery-more');
   const galleryContainer = document.querySelector('.gallery__pictures');
   let galleryHidden = galleryContainer.querySelectorAll('.hidden')
+  // console.log(galleryHidden);
 
   more.addEventListener('click', () => {
     galleryHidden.forEach(hidden => {
