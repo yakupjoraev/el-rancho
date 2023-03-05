@@ -2618,6 +2618,10 @@ body {
   color: var(--brown-color);
 }
 
+.callback-form__political-link:hover {
+  text-decoration: underline;
+}
+
 .residence-detal__inner {
   display: grid;
   grid-template-columns: 660px 460px;
