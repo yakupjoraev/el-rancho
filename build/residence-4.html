@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>Туристический комплекс El Rancho</title>
+  <link rel="stylesheet" href="./css/graph-modal.min.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="main__body">
+  <!-- Header -->
+  <header class="header header--development-page" id="header">
+  <!-- Navbar -->
+  <div class="container">
+    <nav class="nav">
+      <div class="navbar">
+        <div class="navbar__top">
+          <div class="logo">
+            <a href="index.html">
+              <img class="logo-img" src="./img/logo.svg" alt="Туристический комплекс
+            El Rancho">
+            </a>
+
+            <p class="logo__name">
+              Туристический<br>
+              комплекс<br>
+              El Rancho
+            </p>
+          </div>
+          <div class="navbar__booked">
+            <div class="navbar__calls">
+              <a class="navbar__call-num" href="tel:+79295745821">+7 929 574 58 21</a>
+              <p class="navbar__call-text" data-graph-path="callback">Обратный звонок</p>
+            </div>
+
+            <a class="navbar__link btn-primary" href="index.html">Забронировать номер</a>
+          </div>
+
+        </div>
+        <ul class="menu">
+          <li class="menu__item"><a href="index.html" class="menu__item-link" data-scroll>Главная</a></li>
+          <li class="menu__item"><a href="residence.html" class="menu__item-link" data-scroll>Проживание</a></li>
+          <li class="menu__item"><a href="development-page.html" class="menu__item-link" data-scroll>Корпоративы</a>
+          </li>
+          <li class="menu__item"><a href="ferma.html" class="menu__item-link" data-scroll>Ферма</a></li>
+          <li class="menu__item"><a href="services.html" class="menu__item-link" data-scroll>Развлечения и
+              услуги</a></li>
+          <li class="menu__item"><a href="gallery.html" class="menu__item-link" data-scroll>Фотогалерея</a>
+          </li>
+          <li class="menu__item"><a href="news.html" class="menu__item-link" data-scroll>Новости</a></li>
+          <li class="menu__item"><a href="contacts.html" class="menu__item-link" data-scroll>Контакты</a></li>
+
+          <li class="nav__footer">
+            <div class="nav__footer-links">
+              <a class="nav__footer-link" href="tel:+79295745821">+7 929 574 58 21</a>
+              <a class="nav__footer-link" href="#">
+                <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="32.8" height="32.8" rx="16.4" fill="#B3844F" />
+                  <path
+                    d="M23.7463 9.02778C21.9881 7.21787 19.5576 6.23535 17.0755 6.23535C11.8009 6.23535 7.5605 10.5274 7.61221 15.7503C7.61221 17.4051 8.07762 19.0081 8.85329 20.4561L7.50879 25.3687L12.5248 24.0759C13.921 24.8516 15.4724 25.2136 17.0237 25.2136C22.2466 25.2136 26.487 20.9215 26.487 15.6986C26.487 13.1647 25.5045 10.786 23.7463 9.02778ZM17.0755 23.6105C15.6792 23.6105 14.283 23.2485 13.0937 22.5245L12.7834 22.3694L9.7841 23.1451L10.5598 20.1975L10.3529 19.8872C8.07762 16.2157 9.16356 11.3548 12.8868 9.0795C16.6101 6.80418 21.4192 7.89013 23.6946 11.6134C25.9699 15.3366 24.8839 20.1458 21.1607 22.4211C19.9713 23.1968 18.5234 23.6105 17.0755 23.6105ZM21.6261 17.8705L21.0573 17.6119C21.0573 17.6119 20.2299 17.2499 19.7128 16.9914C19.661 16.9914 19.6093 16.9397 19.5576 16.9397C19.4025 16.9397 19.2991 16.9914 19.1956 17.0431C19.1956 17.0431 19.1439 17.0948 18.42 17.9222C18.3682 18.0256 18.2648 18.0773 18.1614 18.0773H18.1097C18.058 18.0773 17.9546 18.0256 17.9028 17.9739L17.6443 17.8705C17.0755 17.6119 16.5583 17.3017 16.1446 16.888C16.0412 16.7845 15.8861 16.6811 15.7827 16.5777C15.4207 16.2157 15.0587 15.802 14.8001 15.3366L14.7484 15.2332C14.6967 15.1815 14.6967 15.1298 14.645 15.0263C14.645 14.9229 14.645 14.8195 14.6967 14.7678C14.6967 14.7678 14.9036 14.5092 15.0587 14.3541C15.1621 14.2507 15.2138 14.0955 15.3173 13.9921C15.4207 13.837 15.4724 13.6301 15.4207 13.475C15.369 13.2164 14.7484 11.8202 14.5933 11.5099C14.4899 11.3548 14.3864 11.3031 14.2313 11.2514H14.0762C13.9728 11.2514 13.8176 11.2514 13.6625 11.2514C13.5591 11.2514 13.4556 11.3031 13.3522 11.3031L13.3005 11.3548C13.1971 11.4065 13.0937 11.5099 12.9902 11.5617C12.8868 11.6651 12.8351 11.7685 12.7317 11.8719C12.3697 12.3373 12.1628 12.9062 12.1628 13.475C12.1628 13.8887 12.2663 14.3024 12.4214 14.6644L12.4731 14.8195C12.9385 15.802 13.5591 16.6811 14.3864 17.4568L14.5933 17.6636C14.7484 17.8188 14.9036 17.9222 15.007 18.0773C16.0929 19.0081 17.334 19.6804 18.7302 20.0424C18.8854 20.0941 19.0922 20.0941 19.2473 20.1458C19.4025 20.1458 19.6093 20.1458 19.7645 20.1458C20.023 20.1458 20.3333 20.0424 20.5401 19.939C20.6953 19.8355 20.7987 19.8355 20.9021 19.7321L21.0055 19.6287C21.109 19.5253 21.2124 19.4735 21.3158 19.3701C21.4192 19.2667 21.5227 19.1633 21.5744 19.0599C21.6778 18.853 21.7295 18.5945 21.7812 18.3359C21.7812 18.2325 21.7812 18.0773 21.7812 17.9739C21.7812 17.9739 21.7295 17.9222 21.6261 17.8705Z"
+                    fill="white" />
+                </svg>
+
+              </a>
+              <a class="nav__footer-link" href="#">
+                <svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.799805" width="32.8" height="32.8" rx="16.4" fill="#B3844F" />
+                  <path
+                    d="M8.17107 16.0385C12.9403 13.9169 16.1205 12.5183 17.7117 11.8425C22.255 9.9131 23.199 9.57794 23.8143 9.56676C23.9497 9.56444 24.2523 9.59869 24.4483 9.76108C24.6138 9.8982 24.6593 10.0834 24.6811 10.2134C24.7029 10.3434 24.73 10.6396 24.7085 10.871C24.4623 13.5122 23.397 19.9218 22.855 22.88C22.6257 24.1318 22.1741 24.5515 21.737 24.5925C20.7869 24.6818 20.0655 23.9515 19.1453 23.3356C17.7055 22.3719 16.892 21.772 15.4944 20.8317C13.8792 19.7449 14.9263 19.1476 15.8468 18.1714C16.0877 17.9159 20.2736 14.0285 20.3546 13.6759C20.3647 13.6317 20.3741 13.4673 20.2785 13.3805C20.1828 13.2937 20.0416 13.3234 19.9397 13.347C19.7953 13.3805 17.4951 14.9328 13.0391 18.0039C12.3862 18.4617 11.7948 18.6847 11.265 18.6731C10.6808 18.6602 9.55721 18.3358 8.72191 18.0586C7.69738 17.7186 6.88311 17.5388 6.95401 16.9613C6.99094 16.6605 7.39663 16.3529 8.17107 16.0385Z"
+                    fill="white" />
+                </svg>
+
+              </a>
+              <a class="nav__footer-link" href="#">
+                <svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.600098" width="32.8" height="32.8" rx="16.4" fill="#B3844F" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M26.5411 10.8125C26.6802 10.3442 26.5411 10 25.8794 10H23.6914C23.135 10 22.8787 10.2973 22.7396 10.6253C22.7396 10.6253 21.6269 13.3652 20.0505 15.145C19.5406 15.6602 19.3088 15.8239 19.0306 15.8239C18.8915 15.8239 18.6902 15.6602 18.6902 15.1919V10.8125C18.6902 10.2504 18.5288 10 18.0651 10H14.6268C14.2792 10 14.0701 10.2608 14.0701 10.5081C14.0701 11.041 14.8581 11.1638 14.9394 12.6626V15.9179C14.9394 16.6316 14.8118 16.7611 14.5336 16.7611C13.7919 16.7611 11.9877 14.0086 10.9175 10.8594C10.7077 10.2473 10.4974 10 9.93819 10H7.75018C7.12503 10 7 10.2973 7 10.6253C7 11.2107 7.74189 14.1147 10.4539 17.9554C12.2622 20.578 14.8093 22 17.1274 22C18.5183 22 18.6902 21.6842 18.6902 21.1403V19.1579C18.6902 18.5263 18.822 18.4003 19.2622 18.4003C19.587 18.4003 20.1432 18.5642 21.4415 19.8288C22.925 21.3274 23.1694 22 24.004 22H26.192C26.8171 22 27.1297 21.6842 26.9493 21.061C26.7521 20.4398 26.0438 19.5389 25.1039 18.4706C24.594 17.8616 23.8289 17.2058 23.5973 16.8781C23.2727 16.4565 23.3654 16.2692 23.5973 15.8947C23.5973 15.8947 26.2629 12.1008 26.5411 10.8127V10.8125Z"
+                    fill="white" />
+                </svg>
+
+              </a>
+            </div>
+
+            <div class="nav__footer-geo">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.9999 13.4299C13.723 13.4299 15.1199 12.0331 15.1199 10.3099C15.1199 8.58681 13.723 7.18994 11.9999 7.18994C10.2768 7.18994 8.87988 8.58681 8.87988 10.3099C8.87988 12.0331 10.2768 13.4299 11.9999 13.4299Z"
+                  stroke="#B3844F" stroke-width="1.5" />
+                <path
+                  d="M3.6202 8.49C5.5902 -0.169998 18.4202 -0.159997 20.3802 8.5C21.5302 13.58 18.3702 17.88 15.6002 20.54C13.5902 22.48 10.4102 22.48 8.3902 20.54C5.6302 17.88 2.4702 13.57 3.6202 8.49Z"
+                  stroke="#B3844F" stroke-width="1.5" />
+              </svg>
+
+              <p class="nav__footer-geo-text">
+                Ярославская область, Хороброво, Школьная, 43
+              </p>
+            </div>
+          </li>
+        </ul>
+        <div class="burger">
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+  <div class="breadcrumbs">
+    <div class="container">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="index.html">
+            Главная
+          </a>
+        </li>
+
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="residence.html">
+            Проживание
+          </a>
+        </li>
+
+        <li class="breadcrumbs__item">
+          Номер в коттедже Honey Moon
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Main Page -->
+  <main>
+    <section class="residence-detal">
+  <div class="container">
+    <div class="residence-detal__inner">
+      <div class="residence-detal__info">
+        <h1 class="residence-detal__title main-title">
+          <span>
+            Номер в коттеджа
+          </span>
+          Honey Moon
+        </h1>
+
+        <div class="residence-detal__descr residence__descr">
+          <p class="residence-detal__descr-text residence__descr-text">
+            Комфортный двухуровневый люкс, расположенный в тихом и уютном месте. Свежий воздух и близость к природе
+            гарантируют отдых от городской суеты.
+          </p>
+        </div>
+
+        <div class="residence-detal__advantages residence-advantages">
+          <ul class="residence-advantages__list">
+            <li class="residence-advantages__item">
+              <img class="residence-advantages__item-img" src="./img/residence-advantages/residence-advantages-1.svg"
+                alt="residence-advantages">
+
+              <p class="residence-advantages__item-descr">
+                Двуспальная кровать
+              </p>
+            </li>
+
+            <li class="residence-advantages__item">
+              <img class="residence-advantages__item-img" src="./img/residence-advantages/residence-advantages-2.svg"
+                alt="residence-advantages">
+
+              <p class="residence-advantages__item-descr">
+                Электрочайник
+              </p>
+            </li>
+
+            <li class="residence-advantages__item">
+              <img class="residence-advantages__item-img" src="./img/residence-advantages/residence-advantages-3.svg"
+                alt="residence-advantages">
+
+              <p class="residence-advantages__item-descr">
+                Места хранения одежды
+              </p>
+            </li>
+
+            <li class="residence-advantages__item">
+              <img class="residence-advantages__item-img" src="./img/residence-advantages/residence-advantages-4.svg"
+                alt="residence-advantages">
+
+              <p class="residence-advantages__item-descr">
+                Душ
+              </p>
+            </li>
+
+            <li class="residence-advantages__item">
+              <img class="residence-advantages__item-img" src="./img/residence-advantages/residence-advantages-5.svg"
+                alt="residence-advantages">
+
+              <p class="residence-advantages__item-descr">
+                СВЧ-печь
+              </p>
+            </li>
+
+            <li class="residence-advantages__item">
+              <img class="residence-advantages__item-img" src="./img/residence-advantages/residence-advantages-6.svg"
+                alt="residence-advantages">
+
+              <p class="residence-advantages__item-descr">
+                Туалетные принадлежности
+              </p>
+            </li>
+
+            <li class="residence-advantages__item">
+              <img class="residence-advantages__item-img" src="./img/residence-advantages/residence-advantages-7.svg"
+                alt="residence-advantages">
+
+              <p class="residence-advantages__item-descr">
+                Тапочки
+              </p>
+            </li>
+
+            <li class="residence-advantages__item">
+              <img class="residence-advantages__item-img" src="./img/residence-advantages/residence-advantages-8.svg"
+                alt="residence-advantages">
+
+              <p class="residence-advantages__item-descr">
+                Холодильник
+              </p>
+            </li>
+
+            <li class="residence-advantages__item">
+              <img class="residence-advantages__item-img" src="./img/residence-advantages/residence-advantages-9.svg"
+                alt="residence-advantages">
+
+              <p class="residence-advantages__item-descr">
+                Постельное белье
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="residence-detal__prices">
+          <div class="residence-detal__price">
+            8500
+            <span>₽ / сутки</span>
+          </div>
+          <div class="residence-detal__discont">
+            <div class="residence-detal__discont-icon">
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9 2.5H15C20 2.5 22 4.5 22 9.5V15.5C22 20.5 20 22.5 15 22.5H9C4 22.5 2 20.5 2 15.5V9.5C2 4.5 4 2.5 9 2.5Z"
+                  stroke="#B3844F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M8.57031 15.77L15.1103 9.22998" stroke="#B3844F" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M8.98001 10.8699C9.65932 10.8699 10.21 10.3192 10.21 9.63992C10.21 8.96061 9.65932 8.40991 8.98001 8.40991C8.3007 8.40991 7.75 8.96061 7.75 9.63992C7.75 10.3192 8.3007 10.8699 8.98001 10.8699Z"
+                  stroke="#B3844F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M15.519 16.5899C16.1984 16.5899 16.7491 16.0392 16.7491 15.3599C16.7491 14.6806 16.1984 14.1299 15.519 14.1299C14.8397 14.1299 14.2891 14.6806 14.2891 15.3599C14.2891 16.0392 14.8397 16.5899 15.519 16.5899Z"
+                  stroke="#B3844F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <div class="residence-detal__discont-sum">
+              -20% по будням
+            </div>
+          </div>
+        </div>
+
+        <div class="residence-detal__links">
+          <a class="residence-detal__link btn-primary" href="#">Забронировать номер</a>
+          <a class="residence-detal__link btn-secondary" href="#callback-form">Задать вопрос</a>
+        </div>
+      </div>
+      <!-- title for mobile -->
+      <h1 class="residence-detal__title residence-detal__title--mobile main-title">
+        <span>
+          Апартаменты
+        </span>
+        EL Rancho стандарт
+      </h1>
+      <div class="residence-detal__slider swiper-container">
+        <div class="residence-detal__slider-wrapper swiper-wrapper">
+          <div class="residence-detal__slide swiper-slide">
+            <img class="residence-detal__slide-img" src="./img/residence/residence-4/residence-4-1.jpg" alt="photos">
+          </div>
+          <div class="residence-detal__slide swiper-slide">
+            <img class="residence-detal__slide-img" src="./img/residence/residence-4/residence-4-2.jpg" alt="photos">
+          </div>
+          <div class="residence-detal__slide swiper-slide">
+            <img class="residence-detal__slide-img" src="./img/residence/residence-4/residence-4-3.jpg" alt="photos">
+          </div>
+          <div class="residence-detal__slide swiper-slide">
+            <img class="residence-detal__slide-img" src="./img/residence/residence-4/residence-4-4.jpg" alt="photos">
+          </div>
+          <div class="residence-detal__slide swiper-slide">
+            <img class="residence-detal__slide-img" src="./img/residence/residence-4/residence-4-5.jpg" alt="photos">
+          </div>
+          <div class="residence-detal__slide swiper-slide">
+            <img class="residence-detal__slide-img" src="./img/residence/residence-4/residence-4-6.jpg" alt="photos">
+          </div>
+        </div>
+
+        <div class="residence-detal__slider-controls">
+          <div class="residence-detal__slider-prev">
+            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.8">
+                <path
+                  d="M14.6464 22.1464C14.4512 22.3417 14.4512 22.6583 14.6464 22.8536L17.8284 26.0355C18.0237 26.2308 18.3403 26.2308 18.5355 26.0355C18.7308 25.8403 18.7308 25.5237 18.5355 25.3284L15.7071 22.5L18.5355 19.6716C18.7308 19.4763 18.7308 19.1597 18.5355 18.9645C18.3403 18.7692 18.0237 18.7692 17.8284 18.9645L14.6464 22.1464ZM30 22H15V23H30V22Z"
+                  fill="white" />
+                <rect x="44.5" y="44.5" width="44" height="44" rx="22" transform="rotate(-180 44.5 44.5)"
+                  stroke="white" />
+              </g>
+            </svg>
+
+          </div>
+
+          <div class="residence-detal__slider-next">
+            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.8">
+                <path
+                  d="M30.3536 22.8536C30.5488 22.6583 30.5488 22.3417 30.3536 22.1464L27.1716 18.9645C26.9763 18.7692 26.6597 18.7692 26.4645 18.9645C26.2692 19.1597 26.2692 19.4763 26.4645 19.6716L29.2929 22.5L26.4645 25.3284C26.2692 25.5237 26.2692 25.8403 26.4645 26.0355C26.6597 26.2308 26.9763 26.2308 27.1716 26.0355L30.3536 22.8536ZM15 23L30 23L30 22L15 22L15 23Z"
+                  fill="white" />
+                <rect x="0.5" y="0.5" width="44" height="44" rx="22" stroke="white" />
+              </g>
+            </svg>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="reviews">
+  <div class="container">
+    <div class="reviews__slider swiper-container">
+      <div class="reviews__slider-header">
+        <p class="reviews__slider-descr">
+          Что о нас говорят
+        </p>
+
+        <h3 class="reviews__slider-title main-title">
+          Отзывы наших гостей
+        </h3>
+
+        <div class="reviews__slider-control">
+          <h3 class="reviews__slider-control-title reviews__slider-title main-title">
+            Отзывы наших гостей
+          </h3>
+
+          <div class="reviews__slider-arrows">
+            <div class="reviews__slider-prev">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="1">
+                  <path
+                    d="M14.6464 29.6464C14.4512 29.8417 14.4512 30.1583 14.6464 30.3536L17.8284 33.5355C18.0237 33.7308 18.3403 33.7308 18.5355 33.5355C18.7308 33.3403 18.7308 33.0237 18.5355 32.8284L15.7071 30L18.5355 27.1716C18.7308 26.9763 18.7308 26.6597 18.5355 26.4645C18.3403 26.2692 18.0237 26.2692 17.8284 26.4645L14.6464 29.6464ZM45 29.5L15 29.5L15 30.5L45 30.5L45 29.5Z"
+                    fill="#0B382B" />
+                  <rect x="59.5" y="59.5" width="59" height="59" rx="29.5" transform="rotate(-180 59.5 59.5)"
+                    stroke="#B3844F" />
+                </g>
+              </svg>
+
+            </div>
+
+            <div class="reviews__slider-pagination swiper-pagination"></div>
+
+            <div class="reviews__slider-next">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M45.3536 30.3536C45.5488 30.1583 45.5488 29.8417 45.3536 29.6464L42.1716 26.4645C41.9763 26.2692 41.6597 26.2692 41.4645 26.4645C41.2692 26.6597 41.2692 26.9763 41.4645 27.1716L44.2929 30L41.4645 32.8284C41.2692 33.0237 41.2692 33.3403 41.4645 33.5355C41.6597 33.7308 41.9763 33.7308 42.1716 33.5355L45.3536 30.3536ZM15 30.5H45V29.5H15V30.5Z"
+                  fill="#0B382B" />
+                <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#B3844F" />
+              </svg>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews__slider-wrapper swiper-wrapper">
+        <div class="reviews__slide swiper-slide">
+          <div class="reviews__slide-name">
+            Илья Ушаков
+          </div>
+
+          <p class="reviews__slide-label">
+            На День рождения устроил жене сюрприз -<br> привёз на настоящую ферму!
+          </p>
+
+          <p class="reviews__slide-descr">
+            Общение с животными, свежий воздух, потрясающий банный комплекс - здесь есть всё, чтобы порадовать любимого
+            человека. Спасибо!
+          </p>
+        </div>
+
+        <div class="reviews__slide swiper-slide">
+          <div class="reviews__slide-name">
+            Катерина Штабова
+          </div>
+
+          <p class="reviews__slide-label">
+            Лошади Эль Ранчо дарят мне крылья!
+          </p>
+
+          <p class="reviews__slide-descr">
+            Щекотно в сердце от воспоминаний моментов счастья. Спасибо огромное, вы - супер!
+          </p>
+        </div>
+
+
+        <div class="reviews__slide swiper-slide">
+          <div class="reviews__slide-name">
+            Илья Ушаков
+          </div>
+
+          <p class="reviews__slide-label">
+            На День рождения устроил жене сюрприз -<br> привёз на настоящую ферму!
+          </p>
+
+          <p class="reviews__slide-descr">
+            Общение с животными, свежий воздух, потрясающий банный комплекс - здесь есть всё, чтобы порадовать любимого
+            человека. Спасибо!
+          </p>
+        </div>
+
+
+        <div class="reviews__slide swiper-slide">
+          <div class="reviews__slide-name">
+            Илья Ушаков
+          </div>
+
+          <p class="reviews__slide-label">
+            На День рождения устроил жене сюрприз -<br> привёз на настоящую ферму!
+          </p>
+
+          <p class="reviews__slide-descr">
+            Общение с животными, свежий воздух, потрясающий банный комплекс - здесь есть всё, чтобы порадовать любимого
+            человека. Спасибо!
+          </p>
+        </div>
+
+        <div class="reviews__slide swiper-slide">
+          <div class="reviews__slide-name">
+            Катерина Штабова
+          </div>
+
+          <p class="reviews__slide-label">
+            Лошади Эль Ранчо дарят мне крылья!
+          </p>
+
+          <p class="reviews__slide-descr">
+            Щекотно в сердце от воспоминаний моментов счастья. Спасибо огромное, вы - супер!
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="services" id="services">
+  <div class="container">
+    <div class="services__inner">
+      <div class="services__info">
+        <h3 class="services__title main-title">
+          РАзвлечения<br>
+          и услуги
+        </h3>
+
+        <p class="services__descr">
+          Мы предлагаем обширную программу услуг
+          и развлечений на любой вкус + трехразовое питание
+          в уютном ресторане на территории комплекса
+        </p>
+
+        <div class="services__links">
+          <a class="services__link btn-primary" href="services.html">Подробнее</a>
+          <a class="services__link btn-secondary" href="#block-search">Забронировать номер</a>
+        </div>
+      </div>
+
+      <div class="services__pictures">
+        <div class="services__picture" style="background-image: url('./img/services/services-1.jpg');">
+        </div>
+
+        <div class="services__picture" style="background-image: url('./img/services/services-2.jpg');">
+        </div>
+
+        <div class="services__picture" style="background-image: url('./img/services/services-3.jpg');">
+        </div>
+
+        <div class="services__picture" style="background-image: url('./img/services/services-4.jpg');">
+        </div>
+
+        <a href="gallery.html" class="services__picture"
+          style="background-image: url('./img/services/services-5.jpg');">
+          <div class="services__picture-icon">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.44996 27.5H21.55C25 27.5 26.375 25.3875 26.5375 22.8125L27.1875 12.4875C27.3625 9.7875 25.2125 7.5 22.5 7.5C21.7375 7.5 21.0375 7.0625 20.6875 6.3875L19.7875 4.575C19.2125 3.4375 17.7125 2.5 16.4375 2.5H13.575C12.2875 2.5 10.7875 3.4375 10.2125 4.575L9.31246 6.3875C8.96246 7.0625 8.26246 7.5 7.49996 7.5C4.78747 7.5 2.63747 9.7875 2.81247 12.4875L3.46247 22.8125C3.61247 25.3875 4.99997 27.5 8.44996 27.5Z"
+                stroke="#F4B201" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M13.125 10H16.875" stroke="#F4B201" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M15 22.5C17.2375 22.5 19.0625 20.675 19.0625 18.4375C19.0625 16.2 17.2375 14.375 15 14.375C12.7625 14.375 10.9375 16.2 10.9375 18.4375C10.9375 20.675 12.7625 22.5 15 22.5Z"
+                stroke="#F4B201" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+
+          <div class="services__picture-gallery link-arrow">
+            Фотогалерея
+
+            <svg width="31" height="9" viewBox="0 0 31 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M30.3536 4.85356C30.5488 4.65829 30.5488 4.34171 30.3536 4.14645L27.1716 0.964468C26.9763 0.769206 26.6597 0.769206 26.4645 0.964468C26.2692 1.15973 26.2692 1.47631 26.4645 1.67158L29.2929 4.5L26.4645 7.32843C26.2692 7.52369 26.2692 7.84027 26.4645 8.03554C26.6597 8.2308 26.9763 8.2308 27.1716 8.03554L30.3536 4.85356ZM-4.37114e-08 5L30 5L30 4L4.37114e-08 4L-4.37114e-08 5Z"
+                fill="currentColor" />
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+    <form class="callback-form js-form" action="#" id="callback-form">
+  <div class="container">
+    <h2 class="callback-form__title main-title">
+      У ВАС ЕСТЬ ВОПРОСЫ?
+    </h2>
+
+    <p class="callback-form__descr">
+      Оставьте свои данные и задайте интересующий вопрос в форме ниже, мы свяжемся с Вами в самое ближайшее время.
+    </p>
+
+    <div class="callback-form__main">
+      <ul class="callback-form__list">
+        <li class="callback-form__item">
+          <input class="callback-form__input js-input input" type="text" name="nmae" placeholder="Имя">
+        </li>
+
+        <li class="callback-form__item">
+          <input class="callback-form__input js-input js-input-phone input" data-validate-field="tel" type="tel"
+            name="tel" placeholder="Телефон*">
+        </li>
+
+        <li class="callback-form__item">
+          <textarea class="callback-form__input callback-form__input--textarea" name="comments"
+            placeholder="Комментарии"></textarea>
+        </li>
+      </ul>
+      <div class="callback-form__footer">
+        <button type="submit" class="callback-form__btn btn-primary">Отправить заявку</button>
+
+        <div class="callback-form__political">
+          Нажимая на кнопку отправить, вы соглашаетесь с
+          <a class="callback-form__political-link" target="_blank" href="privacy-policy.html">политикой
+            конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__logo">
+          <a class="footer__logo-link" href="index.html">
+            <img class="footer__logo-img" src="./img/logo.svg" alt="логотип">
+          </a>
+
+          <p class="footer__logo-name">
+            Туристический<br>
+            комплекс<br>
+            El Rancho
+          </p>
+        </div>
+
+        <div class="footer__booking">
+          <div class="footer__calls">
+            <a class="footer__call-num" href="tel:+79295745821">+7 929 574 58 21</a>
+            <p class="footer__call-descr" data-graph-path="callback">Обратный звонок</p>
+          </div>
+
+          <a class="footer__booking-link btn-primary" href="#block-search">Забронировать номер</a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__menu">
+          <h4 class="footer__menu-title footer-title">
+            Меню
+          </h4>
+
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="index.html">Главная</a>
+            </li>
+
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="services.html">Развлечения и услуги</a>
+            </li>
+
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="residence.html">Проживание</a>
+            </li>
+
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="gallery.html">Фотогалерея</a>
+            </li>
+
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="development-page.html">Корпоративы</a>
+            </li>
+
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="services.html">Новости</a>
+            </li>
+
+
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="ferma.html">Ферма</a>
+            </li>
+
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__addresses">
+          <h4 class="footer__addresses-title footer-title">
+            Наш адрес
+          </h4>
+
+          <ul class="footer__addresses-list">
+            <li class="footer__addresses-item">
+              <a class="footer__addresses-link"
+                href="https://yandex.ru/maps/10841/yaroslavl-oblast/house/shkolnaya_ulitsa_43/Z0EYdANkTU0HQFtsfXR3eXtlZg==/?ll=38.244480%2C56.868763&z=16"
+                target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11.9999 13.4299C13.723 13.4299 15.1199 12.0331 15.1199 10.3099C15.1199 8.58681 13.723 7.18994 11.9999 7.18994C10.2768 7.18994 8.87988 8.58681 8.87988 10.3099C8.87988 12.0331 10.2768 13.4299 11.9999 13.4299Z"
+                    stroke="white" stroke-width="1.5" />
+                  <path
+                    d="M3.61995 8.49C5.58995 -0.169998 18.42 -0.159997 20.38 8.5C21.53 13.58 18.37 17.88 15.6 20.54C13.59 22.48 10.41 22.48 8.38995 20.54C5.62995 17.88 2.46995 13.57 3.61995 8.49Z"
+                    stroke="white" stroke-width="1.5" />
+                </svg>
+
+                Ярославская область, Хороброво, Школьная, 43
+              </a>
+            </li>
+
+            <li class="footer__addresses-item">
+              <a class="footer__addresses-link"
+                href="https://yandex.ru/maps/10841/yaroslavl-oblast/house/shkolnaya_ulitsa_43/Z0EYdANkTU0HQFtsfXR3eXtlZg==/?ll=38.244480%2C56.868763&z=16"
+                target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.29004 7.77998V17.51C2.29004 19.41 3.64004 20.19 5.28004 19.25L7.63004 17.91C8.14004 17.62 8.99004 17.59 9.52004 17.86L14.77 20.49C15.3 20.75 16.15 20.73 16.66 20.44L20.99 17.96C21.54 17.64 22 16.86 22 16.22V6.48998C22 4.58998 20.65 3.80998 19.01 4.74998L16.66 6.08998C16.15 6.37998 15.3 6.40998 14.77 6.13998L9.52004 3.51998C8.99004 3.25998 8.14004 3.27998 7.63004 3.56998L3.30004 6.04998C2.74004 6.36998 2.29004 7.14998 2.29004 7.77998Z"
+                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M8.56006 4V17" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M15.73 6.62012V20.0001" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+
+
+                Посмотреть на карте
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__socials">
+          <h4 class="footer__socials-title footer-title">
+            Соц. сети и<br> мессенджеры
+          </h4>
+
+          <ul class="footer__socials-list">
+            <li class="footer__socials-item">
+              <a class="footer__socials-link" href="#">
+                <img class="footer__socials-img" src="./img/socials/social-1.svg" alt="whatsap">
+              </a>
+            </li>
+
+            <li class="footer__socials-item">
+              <a class="footer__socials-link" href="#">
+                <img class="footer__socials-img" src="./img/socials/social-2.svg" alt="telegram">
+              </a>
+            </li>
+
+            <li class="footer__socials-item">
+              <a class="footer__socials-link" href="#">
+                <img class="footer__socials-img" src="./img/socials/social-3.svg" alt="vk">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__copys">
+        <p class="footer__copy">
+          2023 © Туристический комплекс El Rancho
+        </p>
+
+        <a class="footer__political" href="privacy-policy.html" target="_blank">Политика
+          конфиденциальности</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <style>
+    #block-search {
+      background: #0B382B;
+    }
+
+    .block-search {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 168px;
+      margin-top: -89px;
+      z-index: 4;
+    }
+
+    .tl-container {
+      padding: 0 29px;
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+
+      .block-search {
+        margin-top: 0;
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+
+    }
+  </style>
+  <!-- start TL Search form script -->
+  <script type="text/javascript">
+    (function (w) {
+      var q = [
+        ['setContext', 'TL-INT-uncle-il', 'ru'],
+        ['embed', 'search-form', { container: 'tl-search-form' }]
+      ];
+      var t = w.travelline = (w.travelline || {}), ti = t.integration = (t.integration || {}); ti.__cq = ti.__cq ? ti.__cq.concat(q) : q;
+      if (!ti.__loader) { ti.__loader = true; var d = w.document, p = d.location.protocol, s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = (p == 'https:' ? p : 'http:') + '//ibe.tlintegration.com/integration/loader.js'; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); }
+    })(window);
+  </script>
+  <!-- end TL Search form script -->
+
+</body>
+<script src="./js/inputmask.min.js"></script>
+<script src="./js/just-validate.min.js"></script>
+<script src="./js/graph-modal.min.js"></script>
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/scripts.min.js"></script>
+
+</html>
