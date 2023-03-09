@@ -46,11 +46,16 @@
 
   &__slider {
     position: relative;
-    // max-width: 520px;
+    height: 430px;
     overflow: hidden;
 
     @media (max-width: $breakpoint992) {
+      flex: 0 1 auto;
       text-align: center;
+    }
+
+    @media (max-width: $breakpoint768) {
+      height: 280px;
     }
 
   }
@@ -322,7 +327,7 @@
     z-index: 2;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     gap: 10px;
 

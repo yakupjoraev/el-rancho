@@ -465,21 +465,21 @@ function map() {
 
 map();
 
-function galleryMore() {
-  const more = document.querySelector('.js-gallery-more');
-  const galleryContainer = document.querySelector('.gallery__pictures');
-  let galleryHidden = galleryContainer.querySelectorAll('.hidden')
-  // console.log(galleryHidden);
+// function galleryMore() {
+//   const more = document.querySelector('.js-gallery-more');
+//   const galleryContainer = document.querySelector('.gallery__pictures');
+//   let galleryHidden = galleryContainer.querySelectorAll('.hidden')
+//   // console.log(galleryHidden);
 
-  more.addEventListener('click', () => {
-    galleryHidden.forEach(hidden => {
-      hidden.classList.remove('hidden')
-    });
+//   more.addEventListener('click', () => {
+//     galleryHidden.forEach(hidden => {
+//       hidden.classList.remove('hidden')
+//     });
 
-    more.style.display = "none";
-  })
-}
-galleryMore();
+//     more.style.display = "none";
+//   })
+// }
+// galleryMore();
 
 function galleryMixitup() {
   const container = document.querySelector('.gallery')
