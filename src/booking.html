@@ -12,7 +12,7 @@
   <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <title>Туристический комплекс El Rancho</title>
+  <title>Бронирование - Туристический комплекс El Rancho</title>
   <link rel="stylesheet" href="./css/graph-modal.min.css">
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
@@ -42,91 +42,74 @@
   <!-- end TL head script -->
 </head>
 
-<body class="main__body">
+<body>
   <!-- Header -->
   @@include('./html/_header-development-page.html')
-  <div class="breadcrumbs">
-    <div class="container">
-      <ul class="breadcrumbs__list">
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="index.html">
-            Главная
-          </a>
-        </li>
+  <style>
+    #tl-booking-form {
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
 
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="residence.html">
-            Проживание
-          </a>
-        </li>
+    #tl-anchor {
+      margin: 0 auto 20px;
+      max-width: 1160px;
+    }
+  </style>
+  <!-- start TL Booking form script -->
+  <p id='tl-anchor'></p>
+  <div id='tl-booking-form'>&nbsp;</div>
+  <script type='text/javascript'>
 
-        <li class="breadcrumbs__item">
-          ДОМ ФРАНЕКА
-        </li>
-      </ul>
-    </div>
-  </div>
-  <!-- Main Page -->
-  <main>
-    @@include('./html/_residence-detal-5.html')
-    @@include('./html/_reviews.html')
-    @@include('./html/_services.html')
-    @@include('./html/_callback.html')
-  </main>
+    (function (w) {
+      var q = [
+        ['setContext', 'TL-INT-uncle-il', 'ru'],
+        ['embed', 'booking-form', {
+          container: 'tl-booking-form'
+        }]
+      ];
+      var h = ["ru-ibe.tlintegration.ru", "ibe.tlintegration.ru", "ibe.tlintegration.com"];
+      var t = w.travelline = (w.travelline || {}),
+        ti = t.integration = (t.integration || {});
+      ti.__cq = ti.__cq ? ti.__cq.concat(q) : q;
+      if (!ti.__loader) {
+        ti.__loader = true;
+        var d = w.document, c = d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+
+        function e(s, f) {
+          return function () {
+            w.TL || (c.removeChild(s), f())
+          }
+        }
+
+        (function l(h) {
+          if (0 === h.length) return;
+          var s = d.createElement("script");
+          s.type = "text/javascript";
+          s.async = !0;
+          s.src = "https://" + h[0] + "/integration/loader.js";
+          s.onerror = s.onload = e(s, function () {
+            l(h.slice(1, h.length))
+          });
+          c.appendChild(s)
+        })(h);
+      }
+    })(window);
+  </script>
+  <!-- end TL Booking form script -->
 
   <!-- Footer -->
   @@include('./html/_footer.html')
 
-  <style>
-    #block-search {
-      background: #0B382B;
-    }
-
-    .block-search {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 168px;
-      margin-top: -89px;
-      z-index: 4;
-    }
-
-    .tl-container {
-      padding: 0 29px;
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 768px) {
-
-      .block-search {
-        margin-top: 0;
-        margin-right: -15px;
-        margin-left: -15px;
-      }
-
-    }
-  </style>
-  <!-- start TL Search form script -->
-  <script type="text/javascript">
-    (function (w) {
-      var q = [
-        ['setContext', 'TL-INT-uncle-il', 'ru'],
-        ['embed', 'search-form', { container: 'tl-search-form' }]
-      ];
-      var t = w.travelline = (w.travelline || {}), ti = t.integration = (t.integration || {}); ti.__cq = ti.__cq ? ti.__cq.concat(q) : q;
-      if (!ti.__loader) { ti.__loader = true; var d = w.document, p = d.location.protocol, s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = (p == 'https:' ? p : 'http:') + '//ibe.tlintegration.com/integration/loader.js'; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); }
-    })(window);
-  </script>
-  <!-- end TL Search form script -->
-
 </body>
+
 <script src="./js/inputmask.min.js"></script>
 <script src="./js/just-validate.min.js"></script>
 <script src="./js/graph-modal.min.js"></script>
 <script src="./js/swiper-bundle.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU">
+</script>
 <script src="./js/scripts.min.js"></script>
 
 </html>

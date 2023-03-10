@@ -12,7 +12,7 @@
   <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <title>Туристический комплекс El Rancho</title>
+  <title>Бронирование - Туристический комплекс El Rancho</title>
   <link rel="stylesheet" href="./css/graph-modal.min.css">
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
@@ -42,7 +42,7 @@
   <!-- end TL head script -->
 </head>
 
-<body class="main__body">
+<body>
   <!-- Header -->
   <header class="header header--development-page" id="header">
   <!-- Navbar -->
@@ -140,299 +140,59 @@
     </nav>
   </div>
 </header>
-  <div class="breadcrumbs">
-    <div class="container">
-      <ul class="breadcrumbs__list">
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="index.html">
-            Главная
-          </a>
-        </li>
+  <style>
+    #tl-booking-form {
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
 
-        <li class="breadcrumbs__item">
-          Контакты
-        </li>
-      </ul>
-    </div>
-  </div>
-  <!-- Main Page -->
-  <main>
-    <section class="contacts">
-  <div class="container">
-    <div class="contacts__inner">
-      <h1 class="contacts__title main-title">
-        Контакты
-      </h1>
+    #tl-anchor {
+      margin: 0 auto 20px;
+      max-width: 1160px;
+    }
+  </style>
+  <!-- start TL Booking form script -->
+  <p id='tl-anchor'></p>
+  <div id='tl-booking-form'>&nbsp;</div>
+  <script type='text/javascript'>
 
-      <div class="contacts__info">
-        <div class="contacts__info-block">
-          <h4 class="contacts__info-title">
-            Наш адрес
-          </h4>
+    (function (w) {
+      var q = [
+        ['setContext', 'TL-INT-uncle-il', 'ru'],
+        ['embed', 'booking-form', {
+          container: 'tl-booking-form'
+        }]
+      ];
+      var h = ["ru-ibe.tlintegration.ru", "ibe.tlintegration.ru", "ibe.tlintegration.com"];
+      var t = w.travelline = (w.travelline || {}),
+        ti = t.integration = (t.integration || {});
+      ti.__cq = ti.__cq ? ti.__cq.concat(q) : q;
+      if (!ti.__loader) {
+        ti.__loader = true;
+        var d = w.document, c = d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
 
-          <a class="contacts__info-address"
-            href="https://yandex.ru/maps/10841/yaroslavl-oblast/house/shkolnaya_ulitsa_43/Z0EYdANkTU0HQFtsfXR3eXtlZg==/?ll=38.244480%2C56.868763&z=16"
-            target="_blank">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M11.9989 13.4299C13.722 13.4299 15.1189 12.0331 15.1189 10.3099C15.1189 8.58681 13.722 7.18994 11.9989 7.18994C10.2758 7.18994 8.87891 8.58681 8.87891 10.3099C8.87891 12.0331 10.2758 13.4299 11.9989 13.4299Z"
-                stroke="#0B382B" stroke-width="1.5" />
-              <path
-                d="M3.62166 8.49C5.59166 -0.169998 18.4217 -0.159997 20.3817 8.5C21.5317 13.58 18.3717 17.88 15.6017 20.54C13.5917 22.48 10.4117 22.48 8.39166 20.54C5.63166 17.88 2.47166 13.57 3.62166 8.49Z"
-                stroke="#0B382B" stroke-width="1.5" />
-            </svg>
+        function e(s, f) {
+          return function () {
+            w.TL || (c.removeChild(s), f())
+          }
+        }
 
-            Ярославская область, Хороброво, Школьная, 43
-          </a>
-        </div>
-
-        <div class="contacts__info-block">
-          <h4 class="contacts__info-title">
-            Телефон:
-          </h4>
-
-          <a class="contacts__info-tel" href="tel:+79295745821">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M16.5 20.9999C9.05625 20.9999 3 14.9436 3 7.49989C3.00281 6.22306 3.46919 4.99071 4.31243 4.03194C5.15566 3.07317 6.31837 2.45323 7.58438 2.28739C7.90711 2.2516 8.23284 2.31955 8.51435 2.48138C8.79586 2.6432 9.01851 2.89049 9.15 3.18739L11.0344 7.58426C11.1321 7.81249 11.1713 8.06151 11.1484 8.30873C11.1255 8.55594 11.0412 8.79352 10.9031 8.99989L9.34688 11.3811C10.0516 12.8113 11.2127 13.9658 12.6469 14.6624L15 13.0968C15.2062 12.9578 15.4443 12.8737 15.692 12.8524C15.9397 12.831 16.1888 12.8732 16.4156 12.9749L20.8125 14.8499C21.1094 14.9814 21.3567 15.204 21.5185 15.4855C21.6803 15.767 21.7483 16.0928 21.7125 16.4155C21.5467 17.6815 20.9267 18.8442 19.9679 19.6875C19.0092 20.5307 17.7768 20.9971 16.5 20.9999ZM7.77188 3.77801C6.86714 3.89431 6.03582 4.3364 5.43356 5.02149C4.8313 5.70658 4.4994 6.58771 4.5 7.49989C4.50248 10.6817 5.76756 13.7325 8.01746 15.9824C10.2674 18.2323 13.3182 19.4974 16.5 19.4999C17.4122 19.5005 18.2933 19.1686 18.9784 18.5663C19.6635 17.9641 20.1056 17.1327 20.2219 16.228L15.825 14.353L13.4813 15.9186C13.2656 16.0612 13.0168 16.1456 12.7589 16.1637C12.501 16.1818 12.2428 16.1329 12.0094 16.0218C10.2628 15.1769 8.84994 13.7707 7.99688 12.028C7.8844 11.7954 7.83393 11.5376 7.85036 11.2798C7.86678 11.0219 7.94955 10.7726 8.09063 10.5561L9.65625 8.17489L7.77188 3.77801Z"
-                fill="#0B382B" />
-            </svg>
-
-            +7 929 574 58 21
-          </a>
-
-          <ul class="contacts__info-list">
-            <li class="contacts__info-item">
-              <a class="contacts__info-link" target="_blank" href="https://wa.me/79295745821">
-                <img class="contacts__info-img" src="./img/contacts/WhatsApp.svg" alt="WhatsApp">
-              </a>
-            </li>
-
-            <li class="contacts__info-item">
-              <a class="contacts__info-link" target="_blank" href="https://t.me/lrancho">
-                <img class="contacts__info-img" src="./img/contacts/Telegram.svg" alt="Telegram">
-              </a>
-            </li>
-
-            <li class="contacts__info-item">
-              <a class="contacts__info-link" target="_blank" href="https://vk.com/el_rancho">
-                <img class="contacts__info-img" src="./img/contacts/vk.svg" alt="vk">
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="contacts__info-block">
-          <h4 class="contacts__info-title">
-            Реквизиты:
-          </h4>
-
-          <a class="contacts__info-download" href="Политика_в_отношении_обработки_персональных_данных.docx" download>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M4.00156 10.4V9.6H3.20156V10.4H4.00156ZM10.4016 10.4V9.6H9.60156V10.4H10.4016ZM10.4016 16.8H9.60156V17.6H10.4016V16.8ZM21.6016 5.6H22.4016V5.2688L22.168 5.0336L21.6016 5.6ZM16.8016 0.8L17.368 0.2336L17.1328 0H16.8016V0.8ZM4.00156 11.2H5.60156V9.6H4.00156V11.2ZM4.80156 17.6V13.6H3.20156V17.6H4.80156ZM4.80156 13.6V10.4H3.20156V13.6H4.80156ZM5.60156 12.8H4.00156V14.4H5.60156V12.8ZM6.40156 12C6.40156 12.2122 6.31728 12.4157 6.16725 12.5657C6.01722 12.7157 5.81374 12.8 5.60156 12.8V14.4C6.23808 14.4 6.84853 14.1471 7.29862 13.6971C7.74871 13.247 8.00156 12.6365 8.00156 12H6.40156ZM5.60156 11.2C5.81374 11.2 6.01722 11.2843 6.16725 11.4343C6.31728 11.5843 6.40156 11.7878 6.40156 12H8.00156C8.00156 11.3635 7.74871 10.753 7.29862 10.3029C6.84853 9.85286 6.23808 9.6 5.60156 9.6V11.2ZM9.60156 10.4V16.8H11.2016V10.4H9.60156ZM10.4016 17.6H12.0016V16H10.4016V17.6ZM14.4016 15.2V12H12.8016V15.2H14.4016ZM12.0016 9.6H10.4016V11.2H12.0016V9.6ZM14.4016 12C14.4016 11.3635 14.1487 10.753 13.6986 10.3029C13.2485 9.85286 12.6381 9.6 12.0016 9.6V11.2C12.2137 11.2 12.4172 11.2843 12.5672 11.4343C12.7173 11.5843 12.8016 11.7878 12.8016 12H14.4016ZM12.0016 17.6C12.6381 17.6 13.2485 17.3471 13.6986 16.8971C14.1487 16.447 14.4016 15.8365 14.4016 15.2H12.8016C12.8016 15.4122 12.7173 15.6157 12.5672 15.7657C12.4172 15.9157 12.2137 16 12.0016 16V17.6ZM16.0016 9.6V17.6H17.6016V9.6H16.0016ZM16.8016 11.2H20.8016V9.6H16.8016V11.2ZM16.8016 14.4H19.2016V12.8H16.8016V14.4ZM3.20156 8V2.4H1.60156V8H3.20156ZM20.8016 5.6V8H22.4016V5.6H20.8016ZM4.00156 1.6H16.8016V0H4.00156V1.6ZM16.2352 1.3664L21.0352 6.1664L22.168 5.0336L17.368 0.2336L16.2352 1.3664ZM3.20156 2.4C3.20156 2.18783 3.28585 1.98434 3.43588 1.83431C3.58591 1.68429 3.78939 1.6 4.00156 1.6V0C3.36504 0 2.75459 0.252856 2.30451 0.702944C1.85442 1.15303 1.60156 1.76348 1.60156 2.4H3.20156ZM1.60156 19.2V21.6H3.20156V19.2H1.60156ZM4.00156 24H20.0016V22.4H4.00156V24ZM22.4016 21.6V19.2H20.8016V21.6H22.4016ZM20.0016 24C20.6381 24 21.2485 23.7471 21.6986 23.2971C22.1487 22.847 22.4016 22.2365 22.4016 21.6H20.8016C20.8016 21.8122 20.7173 22.0157 20.5672 22.1657C20.4172 22.3157 20.2137 22.4 20.0016 22.4V24ZM1.60156 21.6C1.60156 22.2365 1.85442 22.847 2.30451 23.2971C2.75459 23.7471 3.36504 24 4.00156 24V22.4C3.78939 22.4 3.58591 22.3157 3.43588 22.1657C3.28585 22.0157 3.20156 21.8122 3.20156 21.6H1.60156Z"
-                fill="#0B382B" />
-            </svg>
-
-            Скачать
-          </a>
-        </div>
-      </div>
-
-      <div class="contacts__map" id="contacts-map">
-
-      </div>
-
-      <div class="contacts__personals">
-        <div class="contacts__personal">
-          <img class="contacts__personal-img" src="./img/contacts/personal-1.png" alt="Андрей Дуванов">
-          <p class="contacts__personal-name">
-            Андрей Дуванов
-          </p>
-
-          <p class="contacts__personal-label">
-            Основатель Агротуристического комплекса El Rancho
-          </p>
-
-          <a class="contacts__personal-tel" href="tel:+79295745821">
-            +7 929 574 58 21
-          </a>
-
-          <ul class="contacts__personal-socials">
-            <li class="contacts__personal-social">
-              <a class="contacts__personal-social-link" href="#">
-                <img class="contacts__personal-social-img" src="./img/contacts/WhatsApp.svg" alt="WhatsApp">
-              </a>
-            </li>
-
-            <li class="contacts__personal-social">
-              <a class="contacts__personal-social-link" href="#">
-                <img class="contacts__personal-social-img" src="./img/contacts/Telegram.svg" alt="Telegram">
-              </a>
-            </li>
-
-            <li class="contacts__personal-social">
-              <a class="contacts__personal-social-link" href="#">
-                <img class="contacts__personal-social-img" src="./img/contacts/vk.svg" alt="vk">
-              </a>
-            </li>
-          </ul>
-
-          <a class="contacts__personal-email" href="mailto:topmail@domain.ru">topmail@domain.ru</a>
-        </div>
-
-        <div class="contacts__personal">
-          <img class="contacts__personal-img" src="./img/contacts/personal-2.png" alt="Елизавета Силизневская ">
-          <p class="contacts__personal-name">
-            Елизавета Силизневская
-          </p>
-
-          <p class="contacts__personal-label">
-            Руководитель клиентского сервиса
-          </p>
-
-          <a class="contacts__personal-tel" href="tel:+79295745822">
-            +7 929 574 58 22
-          </a>
-
-          <ul class="contacts__personal-socials">
-            <li class="contacts__personal-social">
-              <a class="contacts__personal-social-link" href="#">
-                <img class="contacts__personal-social-img" src="./img/contacts/WhatsApp.svg" alt="WhatsApp">
-              </a>
-            </li>
-
-            <li class="contacts__personal-social">
-              <a class="contacts__personal-social-link" href="#">
-                <img class="contacts__personal-social-img" src="./img/contacts/Telegram.svg" alt="Telegram">
-              </a>
-            </li>
-
-            <li class="contacts__personal-social">
-              <a class="contacts__personal-social-link" href="#">
-                <img class="contacts__personal-social-img" src="./img/contacts/vk.svg" alt="vk">
-              </a>
-            </li>
-          </ul>
-
-          <a class="contacts__personal-email" href="mailto:middlemail@domain.ru">middlemail@domain.ru</a>
-        </div>
-
-        <div class="contacts__personal">
-          <img class="contacts__personal-img" src="./img/contacts/personal-3.png" alt="Николай Врехневрский">
-          <p class="contacts__personal-name">
-            Николай Врехневрский
-          </p>
-
-          <p class="contacts__personal-label">
-            Главный зоолог, агроном
-          </p>
-
-          <a class="contacts__personal-tel" href="tel:+79295745823">
-            +7 929 574 58 23
-          </a>
-          <ul class="contacts__personal-socials">
-            <li class="contacts__personal-social">
-              <a class="contacts__personal-social-link" href="#">
-                <img class="contacts__personal-social-img" src="./img/contacts/WhatsApp.svg" alt="WhatsApp">
-              </a>
-            </li>
-
-            <li class="contacts__personal-social">
-              <a class="contacts__personal-social-link" href="#">
-                <img class="contacts__personal-social-img" src="./img/contacts/Telegram.svg" alt="Telegram">
-              </a>
-            </li>
-
-            <li class="contacts__personal-social">
-              <a class="contacts__personal-social-link" href="#">
-                <img class="contacts__personal-social-img" src="./img/contacts/vk.svg" alt="vk">
-              </a>
-            </li>
-          </ul>
-
-          <a class="contacts__personal-email" href="mailto:zoomail@domain.ru">zoomail@domain.ru</a>
-        </div>
-
-        <div class="contacts__personal">
-          <img class="contacts__personal-img" src="./img/contacts/personal-4.png" alt="Светлана Степаненко ">
-          <p class="contacts__personal-name">
-            Светлана Степаненко
-          </p>
-
-          <p class="contacts__personal-label">
-            Главный бухгалтер
-          </p>
-
-          <a class="contacts__personal-tel" href="tel:+79295745824">
-            +7 929 574 58 24
-          </a>
-          <ul class="contacts__personal-socials">
-            <li class="contacts__personal-social">
-              <a class="contacts__personal-social-link" href="#">
-                <img class="contacts__personal-social-img" src="./img/contacts/WhatsApp.svg" alt="WhatsApp">
-              </a>
-            </li>
-
-            <li class="contacts__personal-social">
-              <a class="contacts__personal-social-link" href="#">
-                <img class="contacts__personal-social-img" src="./img/contacts/Telegram.svg" alt="Telegram">
-              </a>
-            </li>
-
-            <li class="contacts__personal-social">
-              <a class="contacts__personal-social-link" href="#">
-                <img class="contacts__personal-social-img" src="./img/contacts/vk.svg" alt="vk">
-              </a>
-            </li>
-          </ul>
-
-          <a class="contacts__personal-email" href="mailto:finance@domain.ru">finance@domain.ru</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-    <form class="callback-form js-form" action="#" id="callback-form">
-  <div class="container">
-    <h2 class="callback-form__title main-title">
-      У ВАС ЕСТЬ ВОПРОСЫ?
-    </h2>
-
-    <p class="callback-form__descr">
-      Оставьте свои данные и задайте интересующий вопрос в форме ниже, мы свяжемся с Вами в самое ближайшее время.
-    </p>
-
-    <div class="callback-form__main">
-      <ul class="callback-form__list">
-        <li class="callback-form__item">
-          <input class="callback-form__input js-input input" type="text" name="nmae" placeholder="Имя">
-        </li>
-
-        <li class="callback-form__item">
-          <input class="callback-form__input js-input js-input-phone input" data-validate-field="tel" type="tel"
-            name="tel" placeholder="Телефон*">
-        </li>
-
-        <li class="callback-form__item">
-          <textarea class="callback-form__input callback-form__input--textarea" name="comments"
-            placeholder="Комментарии"></textarea>
-        </li>
-      </ul>
-      <div class="callback-form__footer">
-        <button type="submit" class="callback-form__btn btn-primary">Отправить заявку</button>
-
-        <div class="callback-form__political">
-          Нажимая на кнопку отправить, вы соглашаетесь с
-          <a class="callback-form__political-link" target="_blank" href="privacy-policy.html">политикой
-            конфиденциальности</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</form>
-  </main>
+        (function l(h) {
+          if (0 === h.length) return;
+          var s = d.createElement("script");
+          s.type = "text/javascript";
+          s.async = !0;
+          s.src = "https://" + h[0] + "/integration/loader.js";
+          s.onerror = s.onload = e(s, function () {
+            l(h.slice(1, h.length))
+          });
+          c.appendChild(s)
+        })(h);
+      }
+    })(window);
+  </script>
+  <!-- end TL Booking form script -->
 
   <!-- Footer -->
   <footer class="footer">
@@ -586,52 +346,8 @@
   </div>
 </footer>
 
-  <style>
-    #block-search {
-      background: #0B382B;
-    }
-
-    .block-search {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 168px;
-      margin-top: -89px;
-      z-index: 4;
-    }
-
-    .tl-container {
-      padding: 0 29px;
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 768px) {
-
-      .block-search {
-        margin-top: 0;
-        margin-right: -15px;
-        margin-left: -15px;
-      }
-
-    }
-  </style>
-  <!-- start TL Search form script -->
-  <script type="text/javascript">
-    (function (w) {
-      var q = [
-        ['setContext', 'TL-INT-uncle-il', 'ru'],
-        ['embed', 'search-form', { container: 'tl-search-form' }]
-      ];
-      var t = w.travelline = (w.travelline || {}), ti = t.integration = (t.integration || {}); ti.__cq = ti.__cq ? ti.__cq.concat(q) : q;
-      if (!ti.__loader) { ti.__loader = true; var d = w.document, p = d.location.protocol, s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = (p == 'https:' ? p : 'http:') + '//ibe.tlintegration.com/integration/loader.js'; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); }
-    })(window);
-  </script>
-  <!-- end TL Search form script -->
-
 </body>
+
 <script src="./js/inputmask.min.js"></script>
 <script src="./js/just-validate.min.js"></script>
 <script src="./js/graph-modal.min.js"></script>
