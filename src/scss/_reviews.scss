@@ -4,7 +4,7 @@
 
   @media (max-width: $breakpoint992) {
     position: relative;
-    padding: 80px 0 165px 0;
+    padding: 80px 0 180px 0;
   }
 
   // .reviews__slider
@@ -57,6 +57,7 @@
     @media (max-width: $breakpoint992) {
       display: block;
       padding-bottom: 0;
+      margin-bottom: 40px;
     }
 
     &::after {

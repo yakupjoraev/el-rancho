@@ -5146,7 +5146,7 @@ body {
 
   .reviews {
     position: relative;
-    padding: 80px 0 165px 0;
+    padding: 80px 0 180px 0;
   }
 
   .reviews__slider-header {
@@ -5165,6 +5165,7 @@ body {
   .reviews__slider-title {
     display: block;
     padding-bottom: 0;
+    margin-bottom: 40px;
   }
 
   .reviews__slider-arrows {
