@@ -75,7 +75,7 @@
         <ul class="menu">
           <li class="menu__item"><a href="index.html" class="menu__item-link" data-scroll>Главная</a></li>
           <li class="menu__item"><a href="residence.html" class="menu__item-link" data-scroll>Проживание</a></li>
-          <li class="menu__item"><a href="development-page.html" class="menu__item-link" data-scroll>Корпоративы</a>
+          <li class="menu__item"><a href="corporate.html" class="menu__item-link" data-scroll>Корпоративы</a>
           </li>
           <li class="menu__item"><a href="ferma.html" class="menu__item-link" data-scroll>Ферма</a></li>
           <li class="menu__item"><a href="services.html" class="menu__item-link" data-scroll>Развлечения и
@@ -973,6 +973,48 @@
           Нажимая на кнопку перезвоните мне, вы соглашаетесь с
           <a class="callback__political-link" href="#">политикой конфиденциальности</a>
         </p>
+      </form>
+    </div>
+  </div>
+
+  <div class="graph-modal__container graph-modal__container--application" role="dialog" aria-modal="true"
+    data-graph-target="application">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content graph-modal__content--application">
+      <!-- контент модального окна -->
+
+      <form class="application-form form__inner js-form" action="mail.php" method="POST">
+        <h4 class="form__title">
+          Оставить заявку на проведение мероприятия
+        </h4>
+        <!-- <input type="hidden" name="admin_email[]" value="yakupjoraev@gmail.com">
+        <input type="hidden" name="form_subject" value="Тема письма"> -->
+        <ul class="form__list">
+          <li class="form__item">
+            <input class="form__input js-input input" type="text" name="nmae" placeholder="Имя">
+          </li>
+
+          <li class="form__item">
+            <input class="form__input js-input js-input-phone input" data-validate-field="tel" type="tel" name="tel"
+              placeholder="Телефон*">
+          </li>
+
+          <li class="form__item">
+            <input class="form__input input js-input" type="number" name="count-peoples" placeholder="Кол-во гостей">
+          </li>
+
+          <li class="form__item">
+            <textarea class="form__input form__input--textarea" name="comments" placeholder="Комментарии"></textarea>
+          </li>
+        </ul>
+        <div class="form__footer">
+          <button type="submit" class="form__btn btn-primary">Отправить заявку</button>
+
+          <div class="form__political">
+            Нажимая на кнопку отправить, вы соглашаетесь с
+            <a class="form__political-link" href="#">политикой конфиденциальности</a>
+          </div>
+        </div>
       </form>
     </div>
   </div>

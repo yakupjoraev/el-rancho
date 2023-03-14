@@ -1,0 +1,270 @@
+.corporate-page {
+  position: relative;
+  padding: 100px 0 326px;
+  background-image: url('../img/corporate/corporate-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $breakpoint992) {
+    padding: 80px 0 240px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    padding: 60px 0 280px;
+  }
+
+
+  // .corporate-page__title
+
+  &__title {
+    padding-bottom: 0;
+    margin-bottom: 50px;
+    color: var(--white-color);
+
+    &::after {
+      content: none;
+    }
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 30px;
+      padding-bottom: 0;
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding-bottom: 0;
+    }
+
+  }
+
+  // .corporate-page__descr
+
+  &__descr {
+    margin-bottom: 60px;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--white-color);
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // .corporate-page__counts
+
+  &__counts {
+
+    & .info__count:not(:last-child) {
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    & .info__count-num {
+      color: var(--white-color);
+    }
+
+    & .info__count-descr {
+      color: var(--white-color);
+    }
+  }
+
+  // .corporate-page__sliders
+
+  &__sliders {
+    margin-top: -150px;
+    padding-bottom: 100px;
+  }
+
+  // .corporate-page__slider-inner
+
+  &__slider-inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    &:first-child {
+      position: relative;
+      margin-bottom: 100px;
+      background-color: var(--grey-color);
+      z-index: 2;
+
+      & .corporate-page__slider-info {
+        padding: 70px 40px;
+
+        @media (max-width: $breakpoint768) {
+          padding: 60px 30px;
+        }
+
+      }
+    }
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column;
+
+
+      &:first-child {
+        flex-direction: column-reverse;
+        gap: 0;
+        margin-bottom: 80px;
+      }
+    }
+  }
+
+  // .corporate-page__slider-main
+
+  &__slider-main {
+    position: relative;
+    min-width: 460px;
+    width: 460px;
+    height: 430px;
+    overflow: hidden;
+
+    @media (max-width: $breakpoint992) {
+      width: 100%;
+      min-width: 100%;
+    }
+
+    @media (max-width: $breakpoint480) {
+      height: 285px;
+    }
+  }
+
+  // .corporate-page__slider-wrapper
+
+  &__slider-wrapper {}
+
+  // .corporate-page__slide
+
+  &__slide {
+    width: 100% !important;
+  }
+
+  // .corporate-page__slide-img
+
+  &__slide-img {
+    height: 100%;
+    object-fit: none;
+    object-position: left;
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  // .corporate-page__slider-controls
+
+  &__slider-controls {}
+
+  // .corporate-page__slider-prev
+
+  &__slider-prev {}
+
+  // .corporate-page__slider-next
+
+  &__slider-next {}
+
+  // .corporate-page__slider-pagination
+
+  &__slider-pagination {}
+
+  // .corporate-page__slider-info
+
+  &__slider-info {}
+
+  // .corporate-page__slider-label
+
+  &__slider-label {
+    margin-bottom: 12px;
+    font-family: var(--first-font-bold);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  // .corporate-page__slider-title
+
+  &__slider-title {
+    padding-bottom: 0;
+    margin-bottom: 20px;
+
+    &::after {
+      content: none;
+    }
+
+    @media (max-width: $breakpoint992) {
+      padding-bottom: 0;
+    }
+  }
+
+  // .corporate-page__slider-descr
+
+  &__slider-descr {
+    font-size: 16px;
+    line-height: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  // .corporate-page__slider-second
+
+  &__slider-second {
+    position: relative;
+    min-width: 560px;
+    width: 560px;
+    height: 375px;
+    overflow: hidden;
+
+    @media (max-width: $breakpoint992) {
+      width: 100%;
+      min-width: 100%;
+    }
+
+    @media (max-width: $breakpoint480) {
+      height: 285px;
+    }
+
+  }
+}
+
+.pleasure {
+  padding: 100px 0;
+  background-color: var(--grey-color);
+  text-align: center;
+
+  @media (max-width: $breakpoint992) {
+    padding: 80px 0;
+  }
+
+
+  // .pleasure__label
+
+  &__label {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  // .pleasure__title
+
+  &__title {
+    padding-bottom: 0;
+    margin-bottom: 40px;
+
+    &::after {
+      content: none;
+    }
+
+    @media (max-width: $breakpoint992) {
+      padding-bottom: 0;
+    }
+
+  }
+
+  // .pleasure__link
+
+  &__link {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+}

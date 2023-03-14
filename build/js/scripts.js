@@ -1,5 +1,7 @@
 // Custom Scripts
 // Custom scripts
+// вызов модал
+const modal = new GraphModal();
 
 //плавный скролл
 const anchors = document.querySelectorAll('a[href*="#"]')
@@ -250,6 +252,50 @@ function fermaMainSlider() {
 }
 fermaMainSlider();
 
+function corporateMainSlider() {
+  const container = document.querySelector('.corporate-page')
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper('.corporate-page__slider-main', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.corporate-page__slider-next',
+      prevEl: '.corporate-page__slider-prev',
+    },
+    pagination: {
+      el: '.corporate-page__slider-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  });
+}
+corporateMainSlider();
+
+function corporateSecondSlider() {
+  const container = document.querySelector('.corporate-page')
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper('.corporate-page__slider-second', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.corporate-page__slider-next',
+      prevEl: '.corporate-page__slider-prev',
+    },
+    pagination: {
+      el: '.corporate-page__slider-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  });
+}
+corporateSecondSlider();
+
 
 
 // Мобильное меню бургер
@@ -307,8 +353,7 @@ window.addEventListener('scroll', fixedNav);
 
 fixedNav()
 
-// вызов модал
-const modal = new GraphModal();
+
 
 
 function validateForm() {
