@@ -167,7 +167,11 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-right: 0 !important;
-  top: 0 !important;
+}
+
+.disable-scroll {
+  position: static !important;
+  height: auto !important;
 }
 
 main {
