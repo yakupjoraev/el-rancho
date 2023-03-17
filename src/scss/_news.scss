@@ -122,13 +122,23 @@
     }
   }
 
+  &__mores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+    }
+  }
+
   // .news__more
 
   &__more {
     display: flex;
     justify-content: center;
     width: fit-content;
-    margin: 0 auto;
 
     @media (max-width: $breakpoint992) {
       max-width: 320px;

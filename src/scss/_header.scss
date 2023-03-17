@@ -146,8 +146,8 @@
     display: inline-flex;
     align-items: center;
     height: 72px;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 13px;
+    line-height: 16px;
     color: var(--white-color);
 
     &::after {
@@ -568,12 +568,17 @@
 
   & .menu__item-link {
     height: auto;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 14px;
     color: var(--green-color);
 
     &:hover::after {
       content: none;
+    }
+
+    @media (max-width: $breakpoint992) {
+      font-size: 16px;
+      line-height: 20px;
     }
   }
 
