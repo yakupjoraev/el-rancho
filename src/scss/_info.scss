@@ -18,10 +18,13 @@
     margin-bottom: 70px;
 
     @media (max-width: $breakpoint992) {
+
       margin-bottom: 50px;
     }
 
     @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      gap: 30px;
       margin-bottom: 30px;
     }
   }
@@ -95,15 +98,18 @@
 
   // .info__picture
 
-  &__picture {
-    @media (max-width: $breakpoint992) {
-      display: none;
-    }
-  }
+  &__picture {}
 
   // .info__img
 
-  &__img {}
+  &__img {
+
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+      width: 100%;
+    }
+
+  }
 
   // .info__counts
 
