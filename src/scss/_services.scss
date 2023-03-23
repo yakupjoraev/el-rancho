@@ -71,6 +71,7 @@
 
   &__link {
     width: fit-content;
+    white-space: nowrap;
 
     @media (max-width: $breakpoint992) {
       width: 100%;

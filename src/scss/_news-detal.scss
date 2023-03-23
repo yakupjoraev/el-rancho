@@ -14,6 +14,7 @@
   &__top {
     padding: 60px;
     margin-bottom: 50px;
+    background-position: center;
 
     @media (max-width: $breakpoint992) {
       padding: 60px 20px;
@@ -256,6 +257,11 @@
   &__picture-descr {
     font-size: 16px;
     line-height: 20px;
+
+    &~.news-detal__img {
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
   }
 
   // .news-detal__factor

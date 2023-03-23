@@ -212,8 +212,18 @@
 
 .info__author-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 30px;
+
+  @media (max-width: $breakpoint992) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.info__author-link {
+  white-space: nowrap;
 }
 
 .info__author-mobile {
